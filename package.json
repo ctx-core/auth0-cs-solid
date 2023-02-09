@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/auth0-pwa-solid",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "Auth0 solid-js components & ctx-core integration for progressive web apps",
 	"keywords": [
 		"ctx-core",
