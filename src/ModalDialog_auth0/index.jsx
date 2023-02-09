@@ -1,4 +1,5 @@
-import { ModalDialog, Style_ } from '@ctx-core/ui-solid'
+import { ModalDialog } from '@ctx-core/dialog-ui-solid'
+import { Style_ } from '@ctx-core/ui-solid'
 import { mergeProps } from 'solid-js'
 import { Auth0 } from '../Auth0/index.jsx'
 /**
