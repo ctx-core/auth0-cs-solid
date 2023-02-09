@@ -1,7 +1,7 @@
-import { auth0__init } from '@censible/domain'
 import {
 	auth0__body_,
 	auth0__forgot_password__open,
+	auth0__init,
 	auth0__login__open,
 	auth0__token__error__,
 	auth0__token__error__logout,
@@ -146,7 +146,7 @@ export function SignupForm_auth0(_$p) {
 	 * @return {Promise<boolean>}
 	 */
 	async function signup__onsubmit(
-		event: Event,
+		event,
 		{
 			email_input,
 			password_input,
@@ -171,7 +171,7 @@ export function SignupForm_auth0(_$p) {
 			email,
 			password
 		}, schedule_forms_clear)
-		return
+		return true
 	}
 	/**
 	 * @param data{import('../_types').auth0__signup_data_T}
@@ -179,9 +179,10 @@ export function SignupForm_auth0(_$p) {
 	 * @return {Promise<void>}
 	 */
 	async function signup(data, schedule_forms_clear = ()=>{}) {
-		const [auth0_userinfo_or_auth0_error] = await post_auth0_dbconnections_signup(ctx,
-			password_realm__body_(ctx, auth0__body_(ctx, data)))
-		/** @type {import('auth0-js').Auth0Error} */
+		const [auth0_userinfo_or_auth0_error] =
+			await post_auth0_dbconnections_signup(
+				ctx,
+				password_realm__body_(ctx, auth0__body_(ctx, data)))
 		const auth0_error = auth0_userinfo_or_auth0_error
 		if (auth0_error.statusCode) {
 			const { code, description } = auth0_error

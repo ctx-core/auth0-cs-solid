@@ -1,4 +1,4 @@
-# @ctx-core/auth0-pwa-solid
+# @ctx-core/auth0-spa-solid
 
 ## 1.0.0
 

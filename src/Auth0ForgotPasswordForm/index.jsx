@@ -1,8 +1,8 @@
-import { auth0__init } from '@censible/domain'
 import {
 	auth0__close,
 	auth0__forgot_password__check_email__open,
 	auth0__forgot_password__validate,
+	auth0__init,
 	auth0__login__open,
 	auth0__passwordless_start__fetch_post,
 	auth0__signup__open,
@@ -25,8 +25,10 @@ export function Auth0ForgotPasswordForm(_$p) {
 	auth0__init(ctx)
 	const AUTH0_DOMAIN_ = useMemo(AUTH0_DOMAIN__(ctx))
 	const auth0__token__error_ = useMemo(auth0__token__error__(ctx))
-	let email_input: HTMLInputElement
-	const error_ = createMemo(()=>auth0__token__error_()?.error)
+	/** @type {HTMLInputElement} */
+	let email_input
+	const error_ = createMemo(()=>
+		auth0__token__error_()?.error)
 	return (
 		<div class="form forgot_password">
 			<CloseDialogHandle onclick={()=>auth0__close(ctx)}/>
@@ -35,7 +37,8 @@ export function Auth0ForgotPasswordForm(_$p) {
 				action={`https://${AUTH0_DOMAIN_()}/passwordless/start`}
 				accept-charset="UTF-8"
 				method="post"
-				onSubmit={$=>forgot_password__onSubmit($, { email_input })}
+				onSubmit={$=>
+					forgot_password__onsubmit($, { email_input })}
 			>
 				<Errors/>
 				<Fieldset/>
@@ -90,10 +93,10 @@ export function Auth0ForgotPasswordForm(_$p) {
 	}
 	/**
 	 * @param event{Event}
-	 * @param email_input{import('../_types').forgot_password__onsubmit__params_T}
+	 * @param email_input{HTMLInputElement}
 	 * @return {Promise<void>}
 	 */
-	async function forgot_password__onSubmit(event: Event, { email_input }) {
+	async function forgot_password__onsubmit(event, { email_input }) {
 		event.preventDefault()
 		const email = email_input.value
 		/** @type {import('@ctx-core/auth0').auth0__passwordless_start__fetch__optional_body_T} */

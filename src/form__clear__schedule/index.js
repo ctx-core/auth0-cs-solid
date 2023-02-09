@@ -8,7 +8,7 @@ export const form__clear__schedule = (ctx, root)=>{
 		input_a__clear(dom_a_('input[type=password]', root))
 	}, 100)
 }
-function input_a__clear(input_a: NodeList) {
+function input_a__clear(input_a) {
 	for (let i = 0; i < input_a.length; i++) {
 		/** @type {HTMLInputElement} */
 		const input = input_a[i]

@@ -13,7 +13,6 @@ import { useMemo } from '@ctx-core/solid-nanostores'
 import { CloseDialogHandle, ctx__Context__use } from '@ctx-core/ui-solid'
 import { createMemo, mergeProps, onMount, Show } from 'solid-js'
 import { form__clear__schedule_ } from '../form__clear__schedule_/index.js'
-import { type DOMElement } from 'solid-js/jsx-runtime'
 /**
  * @param _$p{import('./index.d.ts').ChangePasswordForm_auth0__props_T}
  * @return {JSX.Element}
@@ -25,11 +24,16 @@ export function ChangePasswordForm_auth0(_$p) {
 	auth0__init(ctx)
 	const AUTH0_DOMAIN_ = useMemo(AUTH0_DOMAIN__(ctx))
 	const auth0__token__error_ = useMemo(auth0__token__error__(ctx))
-	let root: HTMLDivElement, password__input: HTMLInputElement, password_confirmation__input: HTMLInputElement
+	/** @type {HTMLInputElement} */
+	let root
+	/** @type {HTMLInputElement} */
+	let password_confirmation__input
+	/** @type {HTMLInputElement} */
+	let password__input
 	const password__error_ =
 		createMemo(()=>auth0__token__error_()?.password)
 	const password_confirmation__error_ =
-		createMemo < string > (()=>auth0__token__error_()?.password_confirmation)
+		createMemo(()=>auth0__token__error_()?.password_confirmation)
 	onMount(()=>queueMicrotask(()=>password__input.focus()))
 	return (
 		<div ref={$=>root = $} class="form change_password ChangePasswordForm_auth0">
@@ -115,7 +119,8 @@ export function ChangePasswordForm_auth0(_$p) {
 	 */
 	async function change_password(form, schedule_forms_clear = ()=>{}) {
 		const { password } = form
-		let error: string
+		/** @type {string} */
+		let error
 		try {
 			const [response_json, response] =
 				await auth0__change_password__fetch_post(ctx, password)

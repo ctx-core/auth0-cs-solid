@@ -109,11 +109,18 @@ export function LoginForm_auth0(/** @type {LoginForm_auth0__props_T} */_$p) {
 				>Forgot Password?</label>
 			</footer>)
 	}
+	/**
+	 * @param event{Event}
+	 * @param username_login_input{HTMLInputElement}
+	 * @param password_login_input{HTMLInputElement}
+	 * @param schedule_forms_clear{()=>void}
+	 * @return {Promise<void>}
+	 */
 	async function login__onsubmit(
-		event: Event,
-		username_login_input: HTMLInputElement,
-		password_login_input: HTMLInputElement,
-		schedule_forms_clear = ()=>{}
+		event,
+		username_login_input,
+		password_login_input,
+		schedule_forms_clear = ()=>{},
 	) {
 		event.preventDefault()
 		const username = username_login_input.value
