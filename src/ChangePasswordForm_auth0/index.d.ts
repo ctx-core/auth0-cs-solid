@@ -1,4 +1,4 @@
-import type  { JSX } from 'solid-js'
+import type { JSX } from 'solid-js'
 export function ChangePasswordForm_auth0(_$p:ChangePasswordForm_auth0__props_T):JSX.Element
 export interface ChangePasswordForm_auth0__props_T {
 	error_class?:string

@@ -12,8 +12,8 @@ import { notyf_error, notyf_success } from '@ctx-core/notyf'
 import { useMemo } from '@ctx-core/solid-nanostores'
 import { CloseDialogHandle, ctx__Context__use } from '@ctx-core/ui-solid'
 import { createMemo, mergeProps, onMount, Show } from 'solid-js'
-import { type DOMElement } from 'solid-js/jsx-runtime'
 import { form__clear__schedule_ } from '../form__clear__schedule_/index.js'
+import { type DOMElement } from 'solid-js/jsx-runtime'
 /**
  * @param _$p{import('./index.d.ts').ChangePasswordForm_auth0__props_T}
  * @return {JSX.Element}
@@ -29,7 +29,7 @@ export function ChangePasswordForm_auth0(_$p) {
 	const password__error_ =
 		createMemo(()=>auth0__token__error_()?.password)
 	const password_confirmation__error_ =
-		createMemo<string>(()=>auth0__token__error_()?.password_confirmation)
+		createMemo < string > (()=>auth0__token__error_()?.password_confirmation)
 	onMount(()=>queueMicrotask(()=>password__input.focus()))
 	return (
 		<div ref={$=>root = $} class="form change_password ChangePasswordForm_auth0">
