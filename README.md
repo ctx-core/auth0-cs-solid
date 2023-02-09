@@ -1,2 +1,3 @@
-# auth0-ui-solid
-Auth0 ui solid-js components
+# auth0-pwa-solid
+
+Auth0 solid-js components & ctx-core integration for progressive web apps
