@@ -1,5 +1,15 @@
 # @ctx-core/auth0-spa-solid
 
+## 1.0.11
+
+### Patch Changes
+
+- index.js=>index.jsx
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/ui-solid@6.0.4
+  - @ctx-core/dialog-ui-solid@1.1.6
+
 ## 1.0.10
 
 ### Patch Changes
