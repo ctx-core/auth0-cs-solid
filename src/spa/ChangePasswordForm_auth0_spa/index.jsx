@@ -13,12 +13,12 @@ import { notyf_error, notyf_success } from '@ctx-core/notyf'
 import { useMemo } from '@ctx-core/solid-nanostores'
 import { ctx__Context__use } from '@ctx-core/ui-solid'
 import { createMemo, mergeProps, onMount, Show } from 'solid-js'
-import { form__clear__schedule_ } from '../form__clear__schedule_/index.js'
+import { form__clear__schedule_ } from '../../form__clear__schedule_/index.js'
 /**
- * @param _$p{import('./index.d.ts').ChangePasswordForm_auth0__props_T}
+ * @param _$p{import('./index.d.ts').ChangePasswordForm_auth0_spa__props_T}
  * @return {JSX.Element}
  */
-export function ChangePasswordForm_auth0(_$p) {
+export function ChangePasswordForm_auth0_spa(_$p) {
 	const $p =
 		mergeProps({ error_class: '', input_class: '', button_class: '', label_class: '' }, _$p)
 	const ctx = ctx__Context__use()
@@ -37,7 +37,7 @@ export function ChangePasswordForm_auth0(_$p) {
 		createMemo(()=>auth0__token__error_()?.password_confirmation)
 	onMount(()=>queueMicrotask(()=>password__input.focus()))
 	return (
-		<div ref={$=>root = $} class="form change_password ChangePasswordForm_auth0">
+		<div ref={$=>root = $} class="form change_password ChangePasswordForm_auth0_spa">
 			<CloseDialogHandle onclick={()=>auth0__close(ctx)}/>
 			<h1>Change Password</h1>
 			<form

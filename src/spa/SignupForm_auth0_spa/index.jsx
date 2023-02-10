@@ -14,14 +14,14 @@ import {
 import { useMemo } from '@ctx-core/solid-nanostores'
 import { ctx__Context__use } from '@ctx-core/ui-solid'
 import { createMemo, mergeProps, Show } from 'solid-js'
-import { CloseDialogHandle_auth0 } from '../CloseDialogHandle_auth0/index.jsx'
-import { login } from '../login/index.js'
-import { form__clear__schedule_ } from '../form__clear__schedule_/index.js'
+import { CloseDialogHandle_auth0_spa } from '../CloseDialogHandle_auth0_spa/index.jsx'
+import { login } from '../../login/index.js'
+import { form__clear__schedule_ } from '../../form__clear__schedule_/index.js'
 /**
- * @param _$p{import('./index.d.ts').SignupForm_auth0__props_T}
+ * @param _$p{import('./index.d.ts').SignupForm_auth0_spa__props_T}
  * @return {JSX.Element}
  */
-export function SignupForm_auth0(_$p) {
+export function SignupForm_auth0_spa(_$p) {
 	const $p = mergeProps({
 		error_class: '', input_class: '', button_class: '', label_class: ''
 	}, _$p)
@@ -45,7 +45,7 @@ export function SignupForm_auth0(_$p) {
 		createMemo(()=>error_() === 'invalid_grant')
 	return (
 		<div ref={$=>root = $} class="form signup">
-			<CloseDialogHandle_auth0/>
+			<CloseDialogHandle_auth0_spa/>
 			<h1><Show when={!!$p.signup_text} fallback={'Sign Up'}>{$p.signup_text}</Show></h1>
 			<form
 				action={`https://${AUTH0_DOMAIN_()}/dbconnections/signup`}

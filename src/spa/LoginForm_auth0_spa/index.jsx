@@ -14,10 +14,10 @@ import {
 import { useMemo } from '@ctx-core/solid-nanostores'
 import { ctx__Context__use } from '@ctx-core/ui-solid'
 import { createMemo, mergeProps, onMount, Show } from 'solid-js'
-import { CloseDialogHandle_auth0 } from '../CloseDialogHandle_auth0/index.jsx'
-import { form__clear__schedule } from '../form__clear__schedule/index.js'
-/** @typedef {import('./index.d.ts').LoginForm_auth0__props_T}LoginForm_auth0__props_T */
-export function LoginForm_auth0(/** @type {LoginForm_auth0__props_T} */_$p) {
+import { CloseDialogHandle_auth0_spa } from '../CloseDialogHandle_auth0_spa/index.jsx'
+import { form__clear__schedule } from '../../form__clear__schedule/index.js'
+/** @typedef {import('./index.d.ts').LoginForm_auth0_spa__props_T}LoginForm_auth0__props_T */
+export function LoginForm_auth0_spa(/** @type {LoginForm_auth0__props_T} */_$p) {
 	/** @type {LoginForm_auth0__props_T} */
 	const $p = mergeProps({
 		class: '', error_class: '', input_class: '', button_class: '', label_class: ''
@@ -39,7 +39,7 @@ export function LoginForm_auth0(/** @type {LoginForm_auth0__props_T} */_$p) {
 	const error_password_ = createMemo(()=>error_() === 'invalid_grant')
 	return (
 		<div ref={$=>root = $} class={`form ${$p.class}`}>
-			<CloseDialogHandle_auth0/>
+			<CloseDialogHandle_auth0_spa/>
 			<h1>
 				<Show when={!!$p.login_text} fallback={'Login'}>{$p.login_text}</Show>
 			</h1>

@@ -14,12 +14,12 @@ import { CloseDialogHandle } from '@ctx-core/dialog-ui-solid'
 import { useMemo } from '@ctx-core/solid-nanostores'
 import { ctx__Context__use } from '@ctx-core/ui-solid'
 import { createMemo, mergeProps, onMount, Show } from 'solid-js'
-import { auth0__body__login_ } from '../auth0__body__login_/index.js'
+import { auth0__body__login_ } from '../../auth0__body__login_/index.js'
 /**
- * @param _$p{import('./index.d.ts').Auth0ForgotPasswordForm__props_T}
+ * @param _$p{import('./index.d.ts').Auth0ForgotPasswordForm_spa__props_T}
  * @return {JSX.Element}
  */
-export function Auth0ForgotPasswordForm(_$p) {
+export function Auth0ForgotPasswordForm_spa(_$p) {
 	const $p =
 		mergeProps({ error_class: '', input_class: '', button_class: '', label_class: '' }, _$p)
 	const ctx = ctx__Context__use()

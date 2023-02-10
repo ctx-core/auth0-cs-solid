@@ -3,10 +3,10 @@ import { CloseDialogHandle } from '@ctx-core/dialog-ui-solid'
 import { ctx__Context__use } from '@ctx-core/ui-solid'
 import { mergeProps, onMount } from 'solid-js'
 /**
- * @param _$p{import('./index.d.ts').ForgotPassword__CheckEmailForm__auth0__props_T}
+ * @param _$p{import('./index.d.ts').ForgotPassword__CheckEmailForm__auth0_spa__props_T}
  * @returns {import('solid-js').JSX.Element}
  */
-export function ForgotPassword__CheckEmailForm__auth0(_$p) {
+export function ForgotPassword__CheckEmailForm__auth0_spa(_$p) {
 	const $p =
 		mergeProps({ class: '', label_class: '' }, _$p)
 	const ctx = ctx__Context__use()
