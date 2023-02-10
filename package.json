@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/auth0-spa-solid",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "Auth0 solid-js components & ctx-core integration for progressive web apps",
 	"keywords": [
 		"ctx-core",
@@ -34,12 +34,12 @@
 	},
 	"dependencies": {
 		"@ctx-core/auth0": "^35.3.0",
-		"@ctx-core/dialog-ui-solid": "^1.1.0",
+		"@ctx-core/dialog-ui-solid": "^1.1.1",
 		"@ctx-core/dom": "^11.2.33",
 		"@ctx-core/notyf": "^1.0.40",
 		"@ctx-core/object": "^24.1.4",
 		"@ctx-core/solid-nanostores": "^1.1.40",
-		"@ctx-core/ui-solid": "^6.0.0",
+		"@ctx-core/ui-solid": "^6.0.1",
 		"auth0-js": "^9.20.1",
 		"solid-js": "^1.6.10"
 	},
