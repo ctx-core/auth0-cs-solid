@@ -1,5 +1,6 @@
 import { auth0__close, auth0__login__open } from '@ctx-core/auth0'
-import { CloseDialogHandle, ctx__Context__use } from '@ctx-core/ui-solid'
+import { CloseDialogHandle } from '@ctx-core/dialog-ui-solid'
+import { ctx__Context__use } from '@ctx-core/ui-solid'
 import { mergeProps, onMount } from 'solid-js'
 /**
  * @param _$p{import('./index.d.ts').ForgotPassword__CheckEmailForm__auth0__props_T}

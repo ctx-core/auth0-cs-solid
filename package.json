@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/auth0-spa-solid",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"description": "Auth0 solid-js components & ctx-core integration for progressive web apps",
 	"keywords": [
 		"ctx-core",

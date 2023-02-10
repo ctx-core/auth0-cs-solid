@@ -8,9 +8,10 @@ import {
 	auth0__token__error__logout,
 	AUTH0_DOMAIN__,
 } from '@ctx-core/auth0'
+import { CloseDialogHandle } from '@ctx-core/dialog-ui-solid'
 import { notyf_error, notyf_success } from '@ctx-core/notyf'
 import { useMemo } from '@ctx-core/solid-nanostores'
-import { CloseDialogHandle, ctx__Context__use } from '@ctx-core/ui-solid'
+import { ctx__Context__use } from '@ctx-core/ui-solid'
 import { createMemo, mergeProps, onMount, Show } from 'solid-js'
 import { form__clear__schedule_ } from '../form__clear__schedule_/index.js'
 /**

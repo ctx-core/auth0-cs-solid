@@ -15,8 +15,8 @@ import { useMemo } from '@ctx-core/solid-nanostores'
 import { ctx__Context__use } from '@ctx-core/ui-solid'
 import { createMemo, mergeProps, Show } from 'solid-js'
 import { CloseDialogHandle_auth0 } from '../CloseDialogHandle_auth0/index.jsx'
-import { form__clear__schedule_ } from '../form__clear__schedule_/index.js'
 import { login } from '../login/index.js'
+import { form__clear__schedule_ } from '../form__clear__schedule_/index.js'
 /**
  * @param _$p{import('./index.d.ts').SignupForm_auth0__props_T}
  * @return {JSX.Element}
