@@ -18,7 +18,6 @@
 	"author": "Brian Takita",
 	"type": "module",
 	"types": "./src/index.d.ts",
-	"svelte": "./src/index.jsx",
 	"exports": {
 		".": {
 			"import": "./src/index.jsx",
