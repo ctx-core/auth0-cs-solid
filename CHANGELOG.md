@@ -1,5 +1,12 @@
 # @ctx-core/auth0-spa-solid
 
+## 2.0.6
+
+### Patch Changes
+
+- LoginForm_auth0_spa: fix: auth0**oauth_token**fetch_post body
+- fix: auth0\_\_init import
+
 ## 2.0.5
 
 ### Patch Changes

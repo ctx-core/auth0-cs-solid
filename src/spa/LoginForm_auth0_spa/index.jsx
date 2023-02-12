@@ -1,7 +1,8 @@
-import { auth0__init } from '@censible/domain'
 import {
+	auth0__body_,
 	auth0__close,
 	auth0__forgot_password__open,
+	auth0__init,
 	auth0__oauth_token__fetch_post,
 	auth0__signup__open,
 	auth0__token__error__,
@@ -17,6 +18,7 @@ import { createMemo, mergeProps, onMount, Show } from 'solid-js'
 import { CloseDialogHandle_auth0_spa } from '../CloseDialogHandle_auth0_spa/index.jsx'
 import { form__clear__schedule } from '../../form__clear__schedule/index.js'
 /** @typedef {import('./index.d.ts').LoginForm_auth0_spa__props_T}LoginForm_auth0__props_T */
+/** @typedef {import('@ctx-core/auth0').auth0__login_data_T}auth0__login_data_T */
 export function LoginForm_auth0_spa(/** @type {LoginForm_auth0__props_T} */_$p) {
 	/** @type {LoginForm_auth0__props_T} */
 	const $p = mergeProps({
@@ -128,19 +130,20 @@ export function LoginForm_auth0_spa(/** @type {LoginForm_auth0__props_T} */_$p) 
 		await login({ username, password }, schedule_forms_clear)
 	}
 	/**
-	 * @param data{import('@ctx-core/auth0').auth0__login_data_T}
+	 * @param data{auth0__login_data_T}
 	 * @param schedule_forms_clear{()=>void}
 	 * @return {Promise<void>}
 	 */
 	async function login(data, schedule_forms_clear = ()=>{}) {
+		/** @type {auth0__login_data_T} */
+		const body = password_realm__body_(ctx, auth0__body_(ctx, data))
 		const [token_response_or_error, response] =
-			await auth0__oauth_token__fetch_post(ctx, password_realm__body_(ctx, data))
+			await auth0__oauth_token__fetch_post(ctx, body)
 		if (response.ok) {
 			auth0__token__json__(ctx).$ = JSON.stringify(token_response_or_error)
 			schedule_forms_clear()
 			auth0__close(ctx)
-		} else {
-			/** @type {import('auth0-js').Auth0Error} */
+		} else if ('error' in token_response_or_error) {
 			const auth_token_error = token_response_or_error
 			auth0__token__error__(ctx).$ = auth_token_error
 			auth0__token__error__logout(ctx, auth_token_error)

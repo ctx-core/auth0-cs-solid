@@ -1,8 +1,8 @@
-import { auth0__init } from '@censible/domain'
 import {
 	auth0__change_password__fetch_post,
 	auth0__change_password__validate,
 	auth0__close,
+	auth0__init,
 	auth0__login__open,
 	auth0__token__error__,
 	auth0__token__error__logout,
