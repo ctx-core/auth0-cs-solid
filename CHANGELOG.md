@@ -1,5 +1,12 @@
 # @ctx-core/auth0-spa-solid
 
+## 2.0.44
+
+### Patch Changes
+
+- @ctx-core/notyf: ^1.0.52 -> ^1.0.53
+- @ctx-core/auth0: ^36.3.3 -> ^36.3.4
+
 ## 2.0.43
 
 ### Patch Changes
