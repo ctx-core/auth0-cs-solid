@@ -1,5 +1,11 @@
 # @ctx-core/auth0-spa-solid
 
+## 2.0.63
+
+### Patch Changes
+
+- @ctx-core/solid-nanostores: ^1.1.48 -> ^1.1.49
+
 ## 2.0.62
 
 ### Patch Changes
