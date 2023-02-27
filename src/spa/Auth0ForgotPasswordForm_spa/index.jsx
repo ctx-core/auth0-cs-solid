@@ -4,10 +4,11 @@ import {
 	auth0__forgot_password__validate,
 	auth0__init,
 	auth0__login__open,
-	auth0__passwordless_start__fetch_post, auth0__passwordless_start__fetch_post__body_T,
+	auth0__passwordless_start__fetch_post,
 	auth0__signup__open,
 	auth0__token__error__,
-	auth0__token__error__logout, AUTH0_CLIENT_ID_,
+	auth0__token__error__logout,
+	AUTH0_CLIENT_ID_,
 	AUTH0_DOMAIN__,
 } from '@ctx-core/auth0'
 import { CloseDialogHandle } from '@ctx-core/dialog-ui-solid'

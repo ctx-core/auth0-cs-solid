@@ -1,5 +1,11 @@
 # @ctx-core/auth0-spa-solid
 
+## 2.0.95
+
+### Patch Changes
+
+- fix: SyntaxError: ambiguous indirect export: auth0**passwordless_start**fetch_post\_\_body_T
+
 ## 2.0.94
 
 ### Patch Changes
