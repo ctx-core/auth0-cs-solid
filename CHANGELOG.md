@@ -1,5 +1,13 @@
 # @ctx-core/auth0-spa-solid
 
+## 2.0.142
+
+### Patch Changes
+
+- @ctx-core/auth0: ^37.7.33 -> ^37.7.34
+- Updated dependencies
+  - @ctx-core/ui-solid@6.0.35
+
 ## 2.0.141
 
 ### Patch Changes
