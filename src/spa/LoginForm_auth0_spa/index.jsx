@@ -12,11 +12,12 @@ import {
 	AUTH0_DOMAIN__,
 	password_realm__body_,
 } from '@ctx-core/auth0'
+import { class_ } from '@ctx-core/html'
 import { useMemo } from '@ctx-core/solid-nanostores'
 import { ctx__Context__use } from '@ctx-core/ui-solid'
 import { createMemo, mergeProps, onMount, Show } from 'solid-js'
-import { CloseDialogHandle_auth0_spa } from '../CloseDialogHandle_auth0_spa/index.jsx'
 import { form__clear__schedule } from '../../form__clear__schedule/index.js'
+import { CloseDialogHandle_auth0_spa } from '../CloseDialogHandle_auth0_spa/index.jsx'
 /** @typedef {import('./index.d.ts').LoginForm_auth0_spa__props_T}LoginForm_auth0__props_T */
 /** @typedef {import('@ctx-core/auth0').auth0__login_data_T}auth0__login_data_T */
 export function LoginForm_auth0_spa(/** @type {LoginForm_auth0__props_T} */_$p) {
@@ -80,8 +81,10 @@ export function LoginForm_auth0_spa(/** @type {LoginForm_auth0__props_T} */_$p) 
 						ref={$=>username__input = $}
 						placeholder="your@email.com"
 						required={true}
-						class={`form-control ${$p.input_class}`}
-						classList={{ invalid: !!error_username_() }}
+						class={class_(
+							`form-control ${$p.input_class}`, {
+								invalid: !!error_username_()
+							})}
 						type="email"
 						id="username-login"
 						name="username"/>
@@ -92,8 +95,10 @@ export function LoginForm_auth0_spa(/** @type {LoginForm_auth0__props_T} */_$p) 
 						ref={$=>password__input = $}
 						placeholder="**********"
 						required={true}
-						class={$p.input_class}
-						classList={{ invalid: !!error_password_() }}
+						class={class_(
+							$p.input_class, {
+								invalid: !!error_password_()
+							})}
 						id="password-login"
 						type="password"
 						name="password"/>

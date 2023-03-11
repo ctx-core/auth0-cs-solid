@@ -7,6 +7,7 @@ import {
 	auth0__opened__class__,
 	auth0__signup__opened__,
 } from '@ctx-core/auth0'
+import { class_ } from '@ctx-core/html'
 import { useMemo } from '@ctx-core/solid-nanostores'
 import { ctx__Context__use, Matcha, Style_ } from '@ctx-core/ui-solid'
 import { Auth0ForgotPasswordForm_spa } from '../Auth0ForgotPasswordForm_spa/index.jsx'
@@ -32,11 +33,11 @@ export function Auth0_spa(/** @type {Auth0__props_T} */_$p) {
 	return [
 		<Style/>,
 		<div
-			class={`Auth0 ${auth0__opened__class_()} ${$p.class}`}
-			classList={{
-				dialog: $p.dialog,
-				visible: !!auth0__opened__class_(),
-			}}
+			class={class_(
+				`Auth0 ${auth0__opened__class_()} ${$p.class}`, {
+					dialog: $p.dialog,
+					visible: !!auth0__opened__class_(),
+				})}
 		>
 			<Show when={$p.show_close}><CloseDialogHandle_auth0_spa/></Show>
 			<Matcha whenthen={[

@@ -9,6 +9,7 @@ import {
 	AUTH0_DOMAIN__,
 } from '@ctx-core/auth0'
 import { CloseDialogHandle } from '@ctx-core/dialog-ui-solid'
+import { class_ } from '@ctx-core/html'
 import { notyf_error, notyf_success } from '@ctx-core/notyf'
 import { useMemo } from '@ctx-core/solid-nanostores'
 import { ctx__Context__use } from '@ctx-core/ui-solid'
@@ -67,8 +68,10 @@ export function ChangePasswordForm_auth0_spa(_$p) {
 							type="password"
 							placeholder="**********"
 							required={true}
-							class={$p.input_class}
-							classList={{ invalid: !!password__error_() }}
+							class={class_(
+								$p.input_class, {
+									invalid: !!password__error_()
+								})}
 							id="password-change_password"
 							name="password"/>
 					</label>
@@ -79,8 +82,10 @@ export function ChangePasswordForm_auth0_spa(_$p) {
 							type="password"
 							id="password_confirmation-change_password"
 							name="password_confirmation"
-							class={$p.input_class}
-							classList={{ invalid: !!password_confirmation__error_() }}
+							class={class_(
+								$p.input_class, {
+									invalid: !!password_confirmation__error_()
+								})}
 							required={true}
 							placeholder="**********"/>
 					</label>

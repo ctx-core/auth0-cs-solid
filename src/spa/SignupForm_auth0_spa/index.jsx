@@ -11,12 +11,13 @@ import {
 	post_auth0_dbconnections_signup,
 	validate_auth0_signup
 } from '@ctx-core/auth0'
+import { class_ } from '@ctx-core/html'
 import { useMemo } from '@ctx-core/solid-nanostores'
 import { ctx__Context__use } from '@ctx-core/ui-solid'
 import { createMemo, mergeProps, Show } from 'solid-js'
-import { CloseDialogHandle_auth0_spa } from '../CloseDialogHandle_auth0_spa/index.jsx'
 import { login } from '../../login/index.js'
 import { form__clear__schedule_ } from '../../form__clear__schedule_/index.js'
+import { CloseDialogHandle_auth0_spa } from '../CloseDialogHandle_auth0_spa/index.jsx'
 /**
  * @param _$p{import('./index.d.ts').SignupForm_auth0_spa__props_T}
  * @return {JSX.Element}
@@ -84,8 +85,10 @@ export function SignupForm_auth0_spa(_$p) {
 						placeholder="your@email.com"
 						required={true}
 						autocomplete="email"
-						class={`form-control ${$p.input_class}`}
-						classList={{ invalid: !!username__error_() }}
+						class={class_(
+							`form-control ${$p.input_class}`, {
+								invalid: !!username__error_()
+							})}
 						type="email"
 						id="email-signup"
 						name="email"/>
@@ -96,8 +99,10 @@ export function SignupForm_auth0_spa(_$p) {
 						ref={$=>password__input = $}
 						placeholder="**********"
 						required={true}
-						class={$p.input_class}
-						classList={{ invalid: !!password__error_() }}
+						class={class_(
+							$p.input_class, {
+								invalid: !!password__error_()
+							})}
 						id="password-signup"
 						type="password"
 						name="password"/>
@@ -108,8 +113,10 @@ export function SignupForm_auth0_spa(_$p) {
 						ref={$=>password_confirmation__input = $}
 						placeholder="**********"
 						required={true}
-						class={$p.input_class}
-						classList={{ invalid: !!password_confirmation__error_() }}
+						class={class_(
+							$p.input_class, {
+								invalid: !!password_confirmation__error_()
+							})}
 						type="password"
 						name="password_confirmation"
 						id="password_confirmation-signup"/>

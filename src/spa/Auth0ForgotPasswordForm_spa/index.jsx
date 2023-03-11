@@ -11,6 +11,7 @@ import {
 	AUTH0_CLIENT_ID_,
 	AUTH0_DOMAIN__,
 } from '@ctx-core/auth0'
+import { class_ } from '@ctx-core/html'
 import { CloseDialogHandle } from '@ctx-core/dialog-ui-solid'
 import { useMemo } from '@ctx-core/solid-nanostores'
 import { ctx__Context__use } from '@ctx-core/ui-solid'
@@ -69,8 +70,10 @@ export function Auth0ForgotPasswordForm_spa(_$p) {
 					ref={$=>email_input = $}
 					placeholder="your@email.com"
 					required={true}
-					class={`form-control ${$p.input_class}`}
-					classList={{ invalid: !!error_() }}
+					class={class_(
+						`form-control ${$p.input_class}`, {
+							invalid: !!error_()
+						})}
 					type="email"
 					id="email-forgot_password"
 					name="email"/>
