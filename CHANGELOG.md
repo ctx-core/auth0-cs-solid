@@ -1,5 +1,11 @@
 # @ctx-core/auth0-spa-solid
 
+## 2.0.155
+
+### Patch Changes
+
+- fix: ∋ @ctx-core/html
+
 ## 2.0.154
 
 ### Patch Changes
