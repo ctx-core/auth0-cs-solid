@@ -1,4 +1,4 @@
-import { mergeProps, Show } from 'solid-js'
+import { createMemo, Show } from 'solid-js'
 import {
 	auth0__change_password__opened__,
 	auth0__forgot_password__check_email__opened__,
@@ -16,13 +16,15 @@ import { CloseDialogHandle_auth0_spa } from '../CloseDialogHandle_auth0_spa/inde
 import { ForgotPassword__CheckEmailForm__auth0_spa } from '../ForgotPassword__CheckEmailForm__auth0_spa/index.jsx'
 import { LoginForm_auth0_spa } from '../LoginForm_auth0_spa/index.jsx'
 import { SignupForm_auth0_spa } from '../SignupForm_auth0_spa/index.jsx'
+/** @typedef {import('solid-js').JSX}JSX */
 /**
- * @param _$p{import('./index.d.ts').Auth0_spa__props_T} Auth0__props_T}
+ * @param {import('./index.d.ts').Auth0_spa__props_T}$p Auth0_spa__props_T}
  * @return {JSX.Element[]}
  * @constructor
  */
-export function Auth0_spa(/** @type {Auth0__props_T} */_$p) {
-	const $p = mergeProps({ class: '', show_close: true }, _$p)
+export function Auth0_spa(/** @type {Auth0_spa__props_T} */$p) {
+	const $p__class_ = createMemo(()=>$p.class ?? '')
+	const show_close_ = createMemo(()=>$p.show_close ?? true)
 	const ctx = ctx__Context__use()
 	const auth0__change_password__opened_ = useMemo(auth0__change_password__opened__(ctx))
 	const auth0__opened__class_ = useMemo(auth0__opened__class__(ctx))
@@ -30,16 +32,19 @@ export function Auth0_spa(/** @type {Auth0__props_T} */_$p) {
 	const auth0__forgot_password__opened_ = useMemo(auth0__forgot_password__opened__(ctx))
 	const auth0__login__opened_ = useMemo(auth0__login__opened__(ctx))
 	const auth0__signup__opened_ = useMemo(auth0__signup__opened__(ctx))
-	return [
+	return /** @type {JSX.Element} */[
 		<Style/>,
 		<div
 			class={class_(
-				`Auth0 ${auth0__opened__class_()} ${$p.class}`, {
+				'Auth0',
+				auth0__opened__class_(),
+				$p__class_(),
+				{
 					dialog: $p.dialog,
 					visible: !!auth0__opened__class_(),
 				})}
 		>
-			<Show when={$p.show_close}><CloseDialogHandle_auth0_spa/></Show>
+			<Show when={show_close_()}><CloseDialogHandle_auth0_spa/></Show>
 			<Matcha whenthen={[
 				[auth0__login__opened_(), ()=><LoginForm_auth0_spa {...$p}/>],
 				[auth0__signup__opened_(), ()=><SignupForm_auth0_spa signup_tos={null} {...$p}/>],

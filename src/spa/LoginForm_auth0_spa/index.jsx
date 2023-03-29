@@ -15,16 +15,21 @@ import {
 import { class_ } from '@ctx-core/html'
 import { useMemo } from '@ctx-core/solid-nanostores'
 import { ctx__Context__use } from '@ctx-core/ui-solid'
-import { createMemo, mergeProps, onMount, Show } from 'solid-js'
+import { createMemo, onMount, Show } from 'solid-js'
 import { form__clear__schedule } from '../../form__clear__schedule/index.js'
 import { CloseDialogHandle_auth0_spa } from '../CloseDialogHandle_auth0_spa/index.jsx'
-/** @typedef {import('./index.d.ts').LoginForm_auth0_spa__props_T}LoginForm_auth0__props_T */
 /** @typedef {import('@ctx-core/auth0').auth0__login_data_T}auth0__login_data_T */
-export function LoginForm_auth0_spa(/** @type {LoginForm_auth0__props_T} */_$p) {
-	/** @type {LoginForm_auth0__props_T} */
-	const $p = mergeProps({
-		class: '', error_class: '', input_class: '', button_class: '', label_class: ''
-	}, _$p)
+/** @typedef {import('./index.d.ts').LoginForm_auth0_spa__props_T}LoginForm_auth0__props_T */
+/**
+ * @param {LoginForm_auth0__props_T}$p
+ * @returns {JSX.Element}
+ */
+export function LoginForm_auth0_spa($p) {
+	const $p__class_ = createMemo(()=>$p.class ?? '')
+	const error_class_ = createMemo(()=>$p.error_class ?? '')
+	const input_class_ = createMemo(()=>$p.input_class ?? '')
+	const button_class_ = createMemo(()=>$p.button_class ?? '')
+	const label_class_ = createMemo(()=>$p.label_class ?? '')
 	const ctx = ctx__Context__use()
 	auth0__init(ctx)
 	const auth0__token__error_ = useMemo(auth0__token__error__(ctx))
@@ -41,7 +46,13 @@ export function LoginForm_auth0_spa(/** @type {LoginForm_auth0__props_T} */_$p) 
 	const error_username_ = createMemo(()=>error_() === 'invalid_grant')
 	const error_password_ = createMemo(()=>error_() === 'invalid_grant')
 	return (
-		<div ref={$=>root = $} class={`form ${$p.class}`}>
+		<div
+			ref={$=>root = $}
+			class={class_(
+				'form',
+				$p__class_()
+			)}
+		>
 			<CloseDialogHandle_auth0_spa/>
 			<h1>
 				<Show when={!!$p.login_text} fallback={'Login'}>{$p.login_text}</Show>
@@ -64,7 +75,10 @@ export function LoginForm_auth0_spa(/** @type {LoginForm_auth0__props_T} */_$p) 
 		return (
 			<Show when={!!auth0__token__error_txt_()}>
 				<ul>
-					<li class={`error ${$p.error_class}`}>
+					<li class={class_(
+						'error',
+						error_class_()
+					)}>
 						{auth0__token__error_txt_()}
 					</li>
 				</ul>
@@ -76,29 +90,30 @@ export function LoginForm_auth0_spa(/** @type {LoginForm_auth0__props_T} */_$p) 
 		return (
 			<fieldset>
 				<label class="field">
-					<div class={$p.label_class}>Email</div>
+					<div class={label_class_()}>Email</div>
 					<input
 						ref={$=>username__input = $}
 						placeholder="your@email.com"
 						required={true}
 						class={class_(
-							`form-control ${$p.input_class}`, {
-								invalid: !!error_username_()
-							})}
+							'form-control',
+							input_class_(),
+							{ invalid: !!error_username_() }
+						)}
 						type="email"
 						id="username-login"
 						name="username"/>
 				</label>
 				<label class="field">
-					<div class={$p.label_class}>Password</div>
+					<div class={label_class_()}>Password</div>
 					<input
 						ref={$=>password__input = $}
 						placeholder="**********"
 						required={true}
 						class={class_(
-							$p.input_class, {
-								invalid: !!error_password_()
-							})}
+							input_class_(),
+							{ invalid: !!error_password_() }
+						)}
 						id="password-login"
 						type="password"
 						name="password"/>
@@ -106,13 +121,25 @@ export function LoginForm_auth0_spa(/** @type {LoginForm_auth0__props_T} */_$p) 
 			</fieldset>)
 	}
 	function Footer() {
-		const label_class_ = createMemo(()=>`auth_navigation ${$p.label_class}`)
+		const label_class_ = createMemo(()=>
+			class_('auth_navigation', label_class_()))
 		return (
 			<footer>
-				<input type="submit" value="Login" class={`button ${$p.button_class}`}/>
-				<label class={label_class_()} onclick={()=>auth0__signup__open(ctx)}
+				<input
+					type="submit"
+					value="Login"
+					class={class_(
+						'button',
+						button_class_(),
+					)}
+				/>
+				<label
+					class={label_class_()}
+					onclick={()=>auth0__signup__open(ctx)}
 				>Don't have an account? Signup&hellip;</label>
-				<label class={label_class_()} onclick={()=>auth0__forgot_password__open(ctx)}
+				<label
+					class={label_class_()}
+					onclick={()=>auth0__forgot_password__open(ctx)}
 				>Forgot Password?</label>
 			</footer>)
 	}

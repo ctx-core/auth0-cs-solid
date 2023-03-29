@@ -1,5 +1,28 @@
 # @ctx-core/auth0-spa-solid
 
+## 2.0.200
+
+### Patch Changes
+
+- refine component prop types:
+
+  Auth0_spa**props_T
+  Auth0ForgotPasswordForm_spa**props_T
+  ChangePasswordForm_auth0_spa**props_T
+  ForgotPassword**CheckEmailForm**auth0_spa**props_T
+  LoginForm_auth0_spa**props_T
+  ModalDialog_auth0_spa**props_T
+  SignupForm_auth0_spa\_\_props_T
+
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/auth0@38.0.0
+
 ## 2.0.199
 
 ### Patch Changes

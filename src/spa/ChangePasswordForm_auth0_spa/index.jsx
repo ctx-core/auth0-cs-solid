@@ -13,15 +13,18 @@ import { class_ } from '@ctx-core/html'
 import { notyf_error, notyf_success } from '@ctx-core/notyf'
 import { useMemo } from '@ctx-core/solid-nanostores'
 import { ctx__Context__use } from '@ctx-core/ui-solid'
-import { createMemo, mergeProps, onMount, Show } from 'solid-js'
+import { createMemo, onMount, Show } from 'solid-js'
 import { form__clear__schedule_ } from '../../form__clear__schedule_/index.js'
+/** @typedef {import('solid-js').JSX}JSX */
 /**
- * @param _$p{import('./index.d.ts').ChangePasswordForm_auth0_spa__props_T}
+ * @param {import('./index.d.ts').ChangePasswordForm_auth0_spa__props_T}$p
  * @return {JSX.Element}
  */
-export function ChangePasswordForm_auth0_spa(_$p) {
-	const $p =
-		mergeProps({ error_class: '', input_class: '', button_class: '', label_class: '' }, _$p)
+export function ChangePasswordForm_auth0_spa($p) {
+	const error_class_ = createMemo(()=>$p.error_class ?? '')
+	const input_class_ = createMemo(()=>$p.input_class ?? '')
+	const button_class_ = createMemo(()=>$p.button_class ?? '')
+	const label_class_ = createMemo(()=>$p.label_class ?? '')
 	const ctx = ctx__Context__use()
 	auth0__init(ctx)
 	const AUTH0_DOMAIN_ = useMemo(AUTH0_DOMAIN__(ctx))
@@ -37,8 +40,11 @@ export function ChangePasswordForm_auth0_spa(_$p) {
 	const password_confirmation__error_ =
 		createMemo(()=>auth0__token__error_()?.password_confirmation)
 	onMount(()=>queueMicrotask(()=>password__input.focus()))
-	return (
-		<div ref={$=>root = $} class="form change_password ChangePasswordForm_auth0_spa">
+	return /** @type {JSX.Element} */(
+		<div
+			ref={$=>root = $}
+			class="form change_password ChangePasswordForm_auth0_spa"
+		>
 			<CloseDialogHandle onclick={()=>auth0__close(ctx)}/>
 			<h1>Change Password</h1>
 			<form
@@ -53,45 +59,56 @@ export function ChangePasswordForm_auth0_spa(_$p) {
 				<Show when={!!auth0__token__error_()}>
 					<ul>
 						<Show when={!!password__error_()}>
-							<li class={`error ${$p.error_class}`}>{password__error_()}</li>
+							<li class={class_(
+								'error',
+								error_class_()
+							)}>{password__error_()}</li>
 						</Show>
 						<Show when={!!password_confirmation__error_()}>
-							<li class={`error ${$p.error_class}`}>{password_confirmation__error_()}</li>
+							<li class={class_(
+								'error',
+								error_class_()
+							)}>{password_confirmation__error_()}</li>
 						</Show>
 					</ul>
 				</Show>
 				<fieldset>
 					<label class="field">
-						<div class={$p.label_class}>Password</div>
+						<div class={label_class_()}>Password</div>
 						<input
 							ref={$=>password__input = $}
 							type="password"
 							placeholder="**********"
 							required={true}
 							class={class_(
-								$p.input_class, {
-									invalid: !!password__error_()
-								})}
+								input_class_(),
+								{ invalid: !!password__error_() })}
 							id="password-change_password"
 							name="password"/>
 					</label>
 					<label class="field">
-						<div class={$p.label_class}>Confirm Password</div>
+						<div class={label_class_()}>Confirm Password</div>
 						<input
 							ref={$=>password_confirmation__input = $}
 							type="password"
 							id="password_confirmation-change_password"
 							name="password_confirmation"
 							class={class_(
-								$p.input_class, {
-									invalid: !!password_confirmation__error_()
-								})}
+								input_class_(),
+								{ invalid: !!password_confirmation__error_() })}
 							required={true}
 							placeholder="**********"/>
 					</label>
 				</fieldset>
 				<footer>
-					<input type="submit" value="Change Password" class={`button ${$p.button_class}`}/>
+					<input
+						type="submit"
+						value="Change Password"
+						class={class_(
+							'button',
+							button_class_()
+						)}
+					/>
 				</footer>
 			</form>
 		</div>)

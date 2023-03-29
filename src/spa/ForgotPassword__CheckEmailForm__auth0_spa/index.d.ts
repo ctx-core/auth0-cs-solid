@@ -1,8 +1,8 @@
-import type { JSX } from 'solid-js'
+import type { JSX, VoidProps } from 'solid-js'
 export declare function ForgotPassword__CheckEmailForm__auth0_spa(
-	_$p:ForgotPassword__CheckEmailForm__auth0_spa__props_T
+	$p:ForgotPassword__CheckEmailForm__auth0_spa__props_T
 ):JSX.Element
-export interface ForgotPassword__CheckEmailForm__auth0_spa__props_T {
+export type ForgotPassword__CheckEmailForm__auth0_spa__props_T = VoidProps<{
 	class?:string
 	label_class?:string
-}
+}>

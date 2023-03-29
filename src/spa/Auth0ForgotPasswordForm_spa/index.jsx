@@ -11,19 +11,22 @@ import {
 	AUTH0_CLIENT_ID_,
 	AUTH0_DOMAIN__,
 } from '@ctx-core/auth0'
-import { class_ } from '@ctx-core/html'
 import { CloseDialogHandle } from '@ctx-core/dialog-ui-solid'
+import { class_ } from '@ctx-core/html'
 import { useMemo } from '@ctx-core/solid-nanostores'
 import { ctx__Context__use } from '@ctx-core/ui-solid'
-import { createMemo, mergeProps, onMount, Show } from 'solid-js'
+import { createMemo, onMount, Show } from 'solid-js'
 import { auth0__body__login_ } from '../../auth0__body__login_/index.js'
+/** @typedef {import('solid-js').JSX}JSX */
 /**
- * @param _$p{import('./index.d.ts').Auth0ForgotPasswordForm_spa__props_T}
+ * @param {import('./index.d.ts').Auth0ForgotPasswordForm_spa__props_T}$p
  * @return {JSX.Element}
  */
-export function Auth0ForgotPasswordForm_spa(_$p) {
-	const $p =
-		mergeProps({ error_class: '', input_class: '', button_class: '', label_class: '' }, _$p)
+export function Auth0ForgotPasswordForm_spa($p) {
+	const error_class_ = createMemo(()=>$p.error_class ?? '')
+	const input_class_ = createMemo(()=>$p.input_class ?? '')
+	const button_class_ = createMemo(()=>$p.button_class ?? '')
+	const label_class_ = createMemo(()=>$p.label_class ?? '')
 	const ctx = ctx__Context__use()
 	auth0__init(ctx)
 	const AUTH0_DOMAIN_ = useMemo(AUTH0_DOMAIN__(ctx))
@@ -32,7 +35,7 @@ export function Auth0ForgotPasswordForm_spa(_$p) {
 	let email_input
 	const error_ = createMemo(()=>
 		auth0__token__error_()?.error)
-	return (
+	return /** @type {JSX.Element} */(
 		<div class="form forgot_password">
 			<CloseDialogHandle onclick={()=>auth0__close(ctx)}/>
 			<h1>Forgot Password</h1>
@@ -47,13 +50,15 @@ export function Auth0ForgotPasswordForm_spa(_$p) {
 				<Fieldset/>
 				<Footer/>
 			</form>
-		</div>
-	)
+		</div>)
 	function Errors() {
 		return (
 			<Show when={!!auth0__token__error_()}>
 				<ul>
-					<li class={`error ${$p.error_class}`}>
+					<li class={class_(
+						'error',
+						error_class_()
+					)}>
 						{auth0__token__error_().error_description}
 					</li>
 				</ul>
@@ -65,13 +70,15 @@ export function Auth0ForgotPasswordForm_spa(_$p) {
 		return (
 			<fieldset>
 				<label class="field">
-				<div class={$p.label_class}>Email</div>
+				<div class={label_class_()}>Email</div>
 				<input
 					ref={$=>email_input = $}
 					placeholder="your@email.com"
 					required={true}
 					class={class_(
-						`form-control ${$p.input_class}`, {
+						'form-control',
+						input_class_(),
+						{
 							invalid: !!error_()
 						})}
 					type="email"
@@ -84,13 +91,26 @@ export function Auth0ForgotPasswordForm_spa(_$p) {
 	function Footer() {
 		return (
 			<footer>
-				<input type="submit" value="Reset Password" class={`button ${$p.button_class}`}/>
+				<input
+					type="submit"
+					value="Reset Password"
+					class={class_(
+						'button',
+						button_class_()
+					)}
+				/>
 				<label
-					class={`auth_navigation ${$p.label_class}`}
+					class={class_(
+						'auth_navigation',
+						label_class_()
+					)}
 					onclick={()=>auth0__login__open(ctx)}
 				>Have an account? Log in&hellip;</label>
 				<label
-					class={`auth_navigation ${$p.label_class}`}
+					class={class_(
+						'auth_navigation',
+						label_class_()
+					)}
 					onclick={()=>auth0__signup__open(ctx)}
 				>Don't have an account? Signup&hellip;</label>
 			</footer>

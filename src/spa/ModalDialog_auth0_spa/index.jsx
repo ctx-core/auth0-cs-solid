@@ -1,19 +1,25 @@
 import { ModalDialog } from '@ctx-core/dialog-ui-solid'
+import { class_ } from '@ctx-core/html'
 import { Style_ } from '@ctx-core/ui-solid'
-import { mergeProps } from 'solid-js'
+import { createMemo } from 'solid-js'
 import { Auth0_spa } from '../Auth0_spa/index.jsx'
+/** @typedef {import('solid-js').JSX}JSX */
 /**
- * @param _$p{import('./index.d.ts').ModalDialog_auth0_spa__props_T}
+ * @param {import('./index.d.ts').ModalDialog_auth0_spa__props_T}$p
  * @return {JSX.Element[]}
  */
-export function ModalDialog_auth0_spa(_$p) {
-	const $p = mergeProps({ class: '', title: '' }, _$p)
-	return [
+export function ModalDialog_auth0_spa($p) {
+	const $p__class_ = createMemo(()=>$p.class ?? '')
+	const title_ = createMemo(()=>$p.title ?? '')
+	return /** @type {JSX.Element} */[
 		<Style/>,
 		<ModalDialog
-			class={`ModalDialog_auth0_spa ${$p.class}`}
-			title={$p.title}
-			onClose={()=>$p.onclose()}
+			class={class_(
+				'ModalDialog_auth0_spa',
+				$p__class_()
+			)}
+			title={title_()}
+			onclose={()=>$p.onclose()}
 		>
 			<Auth0_spa show_close={false}/>
 		</ModalDialog>
