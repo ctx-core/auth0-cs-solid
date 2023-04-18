@@ -1,5 +1,32 @@
 # @ctx-core/auth0-spa-solid
 
+## 2.0.267
+
+### Patch Changes
+
+- @ctx-core/git-tools: ^7.0.58 -> ^7.0.59
+- @ctx-core/queue: ^7.5.15 -> ^7.5.16
+- @ctx-core/build: 1.0.296 -> 1.0.297
+- @ctx-core/monorepo: ^20.2.2 -> ^20.2.3
+- @ctx-core/ctx-core-package-tools: ^8.0.188 -> ^8.0.189
+- @ctx-core/dev-tools: 8.1.108 -> 8.1.109
+- @ctx-core/function: ^21.17.13 -> ^21.17.14
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/auth0@38.0.55
+  - @ctx-core/dialog-ui-solid@2.2.65
+  - @ctx-core/dom@14.1.27
+  - @ctx-core/html@11.2.26
+  - @ctx-core/notyf@1.0.150
+  - @ctx-core/object@27.4.19
+  - @ctx-core/solid-nanostores@1.1.107
+  - @ctx-core/ui-solid@7.1.36
+
 ## 2.0.266
 
 ### Patch Changes
