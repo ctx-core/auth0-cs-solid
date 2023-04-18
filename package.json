@@ -44,7 +44,7 @@
 		"@ctx-core/dom": "^14.1.12",
 		"@ctx-core/html": "^11.2.11",
 		"@ctx-core/notyf": "^1.0.135",
-		"@ctx-core/object": "^27.4.4",
+		"@ctx-core/object": "^27.4.16",
 		"@ctx-core/solid-nanostores": "^1.1.92",
 		"@ctx-core/ui-solid": "^7.1.21",
 		"auth0-js": "^9.20.2",
