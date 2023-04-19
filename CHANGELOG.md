@@ -1,5 +1,20 @@
 # @ctx-core/auth0-spa-solid
 
+## 2.0.271
+
+### Patch Changes
+
+- @ctx-core/monorepo: ^20.3.3 -> ^20.3.4
+- Updated dependencies
+  - @ctx-core/auth0@38.0.59
+  - @ctx-core/dialog-ui-solid@2.2.69
+  - @ctx-core/dom@14.1.31
+  - @ctx-core/html@11.2.30
+  - @ctx-core/notyf@1.0.154
+  - @ctx-core/object@27.4.23
+  - @ctx-core/solid-nanostores@1.1.111
+  - @ctx-core/ui-solid@7.1.40
+
 ## 2.0.270
 
 ### Patch Changes
