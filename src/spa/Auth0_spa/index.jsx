@@ -8,8 +8,9 @@ import {
 	auth0__signup__opened__,
 } from '@ctx-core/auth0'
 import { class_ } from '@ctx-core/html'
+import { ctx__Context__use } from '@ctx-core/solid-js'
 import { useMemo } from '@ctx-core/solid-nanostores'
-import { ctx__Context__use, Matcha, Style_ } from '@ctx-core/ui-solid'
+import { Matcha, Style_ } from '@ctx-core/ui-solid'
 import { Auth0ForgotPasswordForm_spa } from '../Auth0ForgotPasswordForm_spa/index.jsx'
 import { ChangePasswordForm_auth0_spa } from '../ChangePasswordForm_auth0_spa/index.jsx'
 import { CloseDialogHandle_auth0_spa } from '../CloseDialogHandle_auth0_spa/index.jsx'

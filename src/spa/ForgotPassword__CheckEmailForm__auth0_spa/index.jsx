@@ -1,7 +1,7 @@
 import { auth0__close, auth0__login__open } from '@ctx-core/auth0'
 import { CloseDialogHandle } from '@ctx-core/dialog-ui-solid'
 import { class_ } from '@ctx-core/html'
-import { ctx__Context__use } from '@ctx-core/ui-solid'
+import { ctx__Context__use } from '@ctx-core/solid-js'
 import { createMemo, onMount } from 'solid-js'
 /** @typedef {import('solid-js').JSX}JSX */
 /**

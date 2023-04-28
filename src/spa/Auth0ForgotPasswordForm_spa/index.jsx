@@ -13,8 +13,8 @@ import {
 } from '@ctx-core/auth0'
 import { CloseDialogHandle } from '@ctx-core/dialog-ui-solid'
 import { class_ } from '@ctx-core/html'
+import { ctx__Context__use } from '@ctx-core/solid-js'
 import { useMemo } from '@ctx-core/solid-nanostores'
-import { ctx__Context__use } from '@ctx-core/ui-solid'
 import { createMemo, onMount, Show } from 'solid-js'
 import { auth0__body__login_ } from '../../auth0__body__login_/index.js'
 /** @typedef {import('solid-js').JSX}JSX */

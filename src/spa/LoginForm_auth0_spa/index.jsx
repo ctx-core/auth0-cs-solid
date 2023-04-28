@@ -13,8 +13,8 @@ import {
 	password_realm__body_,
 } from '@ctx-core/auth0'
 import { class_ } from '@ctx-core/html'
+import { ctx__Context__use } from '@ctx-core/solid-js'
 import { useMemo } from '@ctx-core/solid-nanostores'
-import { ctx__Context__use } from '@ctx-core/ui-solid'
 import { createMemo, onMount, Show } from 'solid-js'
 import { form__clear__schedule } from '../../form__clear__schedule/index.js'
 import { CloseDialogHandle_auth0_spa } from '../CloseDialogHandle_auth0_spa/index.jsx'

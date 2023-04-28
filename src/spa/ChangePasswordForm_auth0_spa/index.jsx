@@ -11,8 +11,8 @@ import {
 import { CloseDialogHandle } from '@ctx-core/dialog-ui-solid'
 import { class_ } from '@ctx-core/html'
 import { notyf_error, notyf_success } from '@ctx-core/notyf'
+import { ctx__Context__use } from '@ctx-core/solid-js'
 import { useMemo } from '@ctx-core/solid-nanostores'
-import { ctx__Context__use } from '@ctx-core/ui-solid'
 import { createMemo, onMount, Show } from 'solid-js'
 import { form__clear__schedule_ } from '../../form__clear__schedule_/index.js'
 /** @typedef {import('solid-js').JSX}JSX */

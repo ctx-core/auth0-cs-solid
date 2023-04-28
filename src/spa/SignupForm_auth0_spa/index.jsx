@@ -12,8 +12,8 @@ import {
 	validate_auth0_signup
 } from '@ctx-core/auth0'
 import { class_ } from '@ctx-core/html'
+import { ctx__Context__use } from '@ctx-core/solid-js'
 import { useMemo } from '@ctx-core/solid-nanostores'
-import { ctx__Context__use } from '@ctx-core/ui-solid'
 import { createMemo, Show } from 'solid-js'
 import { login } from '../../login/index.js'
 import { form__clear__schedule_ } from '../../form__clear__schedule_/index.js'
