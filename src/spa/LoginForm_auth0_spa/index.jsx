@@ -3,7 +3,7 @@ import {
 	auth0__close,
 	auth0__forgot_password__open,
 	auth0__init,
-	auth0__oauth_token__fetch_post,
+	auth0__oauth_token__POST__fetch2,
 	auth0__signup__open,
 	auth0__token__error__,
 	auth0__token__error__logout,
@@ -170,7 +170,7 @@ export function LoginForm_auth0_spa($p) {
 		/** @type {auth0__login_data_T} */
 		const body = password_realm__body_(ctx, auth0__body_(ctx, data))
 		const [token_response_or_error, response] =
-			await auth0__oauth_token__fetch_post(ctx, body)
+			await auth0__oauth_token__POST__fetch2(ctx, body)
 		if (response.ok) {
 			auth0__token__json__(ctx).$ = JSON.stringify(token_response_or_error)
 			schedule_forms_clear()

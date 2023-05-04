@@ -4,7 +4,7 @@ import {
 	auth0__forgot_password__validate,
 	auth0__init,
 	auth0__login__open,
-	auth0__passwordless_start__fetch_post,
+	auth0__passwordless_start__POST__fetch2,
 	auth0__signup__open,
 	auth0__token__error__,
 	auth0__token__error__logout,
@@ -124,7 +124,7 @@ export function Auth0ForgotPasswordForm_spa($p) {
 	async function forgot_password__onsubmit(event, { email_input }) {
 		event.preventDefault()
 		const email = email_input.value
-		/** @type {import('@ctx-core/auth0').auth0__passwordless_start__fetch_post__body_T} */
+		/** @type {import('@ctx-core/auth0').auth0__passwordless_start__POST__fetch2__body_T} */
 		const data = {
 			client_id: AUTH0_CLIENT_ID_(ctx),
 			connection: 'email',
@@ -136,8 +136,8 @@ export function Auth0ForgotPasswordForm_spa($p) {
 			auth0__token__error__logout(ctx, auth0_token_error)
 			return
 		}
-		/** @type {import('../_types').auth0__passwordless_start__fetch_post__body_T} */
-		await auth0__passwordless_start__fetch_post(ctx, auth0__body__login_(ctx, data))
+		/** @type {import('../_types').auth0__passwordless_start__POST__fetch2__body_T} */
+		await auth0__passwordless_start__POST__fetch2(ctx, auth0__body__login_(ctx, data))
 		auth0__forgot_password__check_email__open(ctx)
 	}
 }

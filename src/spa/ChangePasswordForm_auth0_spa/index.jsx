@@ -1,5 +1,5 @@
 import {
-	auth0__change_password__fetch_post,
+	auth0__change_password__POST__fetch2,
 	auth0__change_password__validate,
 	auth0__close,
 	auth0__init,
@@ -140,13 +140,16 @@ export function ChangePasswordForm_auth0_spa($p) {
 	 * @param schedule_forms_clear
 	 * @return {Promise<void>}
 	 */
-	async function change_password(form, schedule_forms_clear = ()=>{}) {
+	async function change_password(form, schedule_forms_clear = ()=>{
+	}) {
 		const { password } = form
 		/** @type {string} */
 		let error
 		try {
 			const [response_json, response] =
-				await auth0__change_password__fetch_post(ctx, password)
+				await auth0__change_password__POST__fetch2(
+					ctx,
+					password)
 			if (!response.ok) {
 				if (response.status === 401) {
 					auth0__login__open(ctx)

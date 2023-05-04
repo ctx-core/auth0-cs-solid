@@ -1,6 +1,6 @@
 import {
 	auth0__close,
-	auth0__oauth_token__fetch_post,
+	auth0__oauth_token__POST__fetch2,
 	auth0__token__error__,
 	auth0__token__error__logout,
 	auth0__token__json__,
@@ -9,7 +9,7 @@ import {
 import { auth0__body__login_ } from '../auth0__body__login_/index.js'
 export const login = async (ctx, data, schedule_forms_clear = ()=>{})=>{
 	const [json, response] =
-		await auth0__oauth_token__fetch_post(
+		await auth0__oauth_token__POST__fetch2(
 			ctx,
 			password_realm__body_(ctx, auth0__body__login_(ctx, data)))
 	if (response.ok) {
