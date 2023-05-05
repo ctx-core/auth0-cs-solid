@@ -989,13 +989,13 @@
 
 - refine component prop types:
 
-  Auth0_spa**props_T
-  Auth0ForgotPasswordForm_spa**props_T
-  ChangePasswordForm_auth0_spa**props_T
-  ForgotPassword**CheckEmailForm**auth0_spa**props_T
-  LoginForm_auth0_spa**props_T
-  ModalDialog_auth0_spa**props_T
-  SignupForm_auth0_spa\_\_props_T
+  Auth0_spa\__props_T
+  Auth0ForgotPasswordForm_spa\__props_T
+  ChangePasswordForm_auth0_spa\__props_T
+  ForgotPassword\__CheckEmailForm\__auth0_spa\__props_T
+  LoginForm_auth0_spa\__props_T
+  ModalDialog_auth0_spa\__props_T
+  SignupForm_auth0_spa\__props_T
 
 - Updated dependencies
 - Updated dependencies
@@ -1945,7 +1945,7 @@
 
 ### Patch Changes
 
-- fix: SyntaxError: ambiguous indirect export: auth0**passwordless_start**fetch_post\_\_body_T
+- fix: SyntaxError: ambiguous indirect export: auth0\__passwordless_start\__fetch_post\__body_T
 
 ## 2.0.94
 
@@ -1979,7 +1979,7 @@
 
 ### Patch Changes
 
-- import*meta_env*() instead of process.env
+- import_meta_env_() instead of process.env
 - Updated dependencies
 - Updated dependencies
 - Updated dependencies
@@ -2676,8 +2676,8 @@
 
 ### Patch Changes
 
-- LoginForm_auth0_spa: fix: auth0**oauth_token**fetch_post body
-- fix: auth0\_\_init import
+- LoginForm_auth0_spa: fix: auth0\__oauth_token\__fetch_post body
+- fix: auth0\__init import
 
 ## 2.0.5
 
@@ -2810,17 +2810,17 @@
 - initial version:
 
   - Auth0
-  - Auth0\_\_props_T
+  - Auth0\__props_T
   - Auth0ForgotPasswordForm
-  - Auth0ForgotPasswordForm\_\_props_T
+  - Auth0ForgotPasswordForm\__props_T
   - ChangePasswordForm_auth0
-  - ChangePasswordForm_auth0\_\_props_T
+  - ChangePasswordForm_auth0\__props_T
   - CloseDialogHandle_auth0
-  - ForgotPassword**CheckEmailForm**auth0
-  - ForgotPassword**CheckEmailForm**auth0\_\_props_T
+  - ForgotPassword\__CheckEmailForm\__auth0
+  - ForgotPassword\__CheckEmailForm\__auth0\__props_T
   - LoginForm_auth0
-  - LoginForm_auth0\_\_props_T
+  - LoginForm_auth0\__props_T
   - ModalDialog_auth0
-  - ModalDialog_auth0\_\_props_T
+  - ModalDialog_auth0\__props_T
   - SignupForm_auth0
-  - SignupForm_auth0\_\_props_T
+  - SignupForm_auth0\__props_T
