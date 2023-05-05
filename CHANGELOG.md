@@ -1,5 +1,11 @@
 # @ctx-core/auth0-spa-solid
 
+## 2.0.320
+
+### Patch Changes
+
+- @ctx-core/solid-nanostores: ^2.1.1 -> ^2.1.2
+
 ## 2.0.319
 
 ### Patch Changes
@@ -2010,7 +2016,7 @@
 
 ### Patch Changes
 
-- import_meta_env_() instead of process.env
+- import*meta_env*() instead of process.env
 - Updated dependencies
 - Updated dependencies
 - Updated dependencies
