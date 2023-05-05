@@ -1,5 +1,18 @@
 # @ctx-core/auth0-spa-solid
 
+## 2.0.317
+
+### Patch Changes
+
+- @ctx-core/solid-js: ^1.3.4 -> ^1.3.5
+- @ctx-core/solid-nanostores: ^2.0.4 -> ^2.0.5
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/dialog-ui-solid@2.2.89
+  - @ctx-core/ui-solid@8.1.5
+  - @ctx-core/auth0@38.2.10
+  - @ctx-core/notyf@1.0.163
+
 ## 2.0.316
 
 ### Patch Changes
@@ -1985,7 +1998,7 @@
 
 ### Patch Changes
 
-- import_meta_env_() instead of process.env
+- import*meta_env*() instead of process.env
 - Updated dependencies
 - Updated dependencies
 - Updated dependencies
