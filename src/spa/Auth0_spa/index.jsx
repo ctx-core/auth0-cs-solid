@@ -1,11 +1,11 @@
 import { createMemo, Show } from 'solid-js'
 import {
-	auth0__change_password__opened__,
-	auth0__forgot_password__check_email__opened__,
-	auth0__forgot_password__opened__,
-	auth0__login__opened__,
-	auth0__opened__class__,
-	auth0__signup__opened__,
+	auth0__change_password__opened$_,
+	auth0__forgot_password__check_email__opened$_,
+	auth0__forgot_password__opened$_,
+	auth0__login__opened$_,
+	auth0__opened__class$_,
+	auth0__signup__opened$_,
 } from '@ctx-core/auth0'
 import { class_ } from '@ctx-core/html'
 import { ctx__Context__use } from '@ctx-core/solid-js'
@@ -27,12 +27,12 @@ export function Auth0_spa(/** @type {Auth0_spa__props_T} */$p) {
 	const $p__class_ = createMemo(()=>$p.class ?? '')
 	const show_close_ = createMemo(()=>$p.show_close ?? true)
 	const ctx = ctx__Context__use()
-	const auth0__change_password__opened_ = useMemo(auth0__change_password__opened__(ctx))
-	const auth0__opened__class_ = useMemo(auth0__opened__class__(ctx))
-	const auth0__forgot_password__check_email__opened_ = useMemo(auth0__forgot_password__check_email__opened__(ctx))
-	const auth0__forgot_password__opened_ = useMemo(auth0__forgot_password__opened__(ctx))
-	const auth0__login__opened_ = useMemo(auth0__login__opened__(ctx))
-	const auth0__signup__opened_ = useMemo(auth0__signup__opened__(ctx))
+	const auth0__change_password__opened_ = useMemo(auth0__change_password__opened$_(ctx))
+	const auth0__opened__class_ = useMemo(auth0__opened__class$_(ctx))
+	const auth0__forgot_password__check_email__opened_ = useMemo(auth0__forgot_password__check_email__opened$_(ctx))
+	const auth0__forgot_password__opened_ = useMemo(auth0__forgot_password__opened$_(ctx))
+	const auth0__login__opened_ = useMemo(auth0__login__opened$_(ctx))
+	const auth0__signup__opened_ = useMemo(auth0__signup__opened$_(ctx))
 	return /** @type {JSX.Element} */[
 		<Style/>,
 		<div

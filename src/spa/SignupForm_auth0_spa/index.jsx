@@ -3,10 +3,10 @@ import {
 	auth0__forgot_password__open,
 	auth0__init,
 	auth0__login__open,
-	auth0__token__error__,
+	auth0__token__error$_,
 	auth0__token__error__logout,
-	auth0__token__error_txt__,
-	AUTH0_DOMAIN__,
+	auth0__token__error_txt$_,
+	AUTH0_DOMAIN$_,
 	password_realm__body_,
 	post_auth0_dbconnections_signup,
 	validate_auth0_signup
@@ -29,8 +29,8 @@ export function SignupForm_auth0_spa($p) {
 	const label_class_ = createMemo(()=>$p.label_class ?? '')
 	const ctx = ctx__Context__use()
 	auth0__init(ctx)
-	const AUTH0_DOMAIN_ = useMemo(AUTH0_DOMAIN__(ctx))
-	const auth0__token__error_ = useMemo(auth0__token__error__(ctx))
+	const AUTH0_DOMAIN_ = useMemo(AUTH0_DOMAIN$_(ctx))
+	const auth0__token__error_ = useMemo(auth0__token__error$_(ctx))
 	/** @type {HTMLDivElement} */
 	let root
 	/** @type {HTMLInputElement} */
@@ -39,7 +39,7 @@ export function SignupForm_auth0_spa($p) {
 	let password__input
 	/** @type {HTMLInputElement} */
 	let password_confirmation__input
-	const auth0__token__error_txt_ = useMemo(auth0__token__error_txt__(ctx))
+	const auth0__token__error_txt_ = useMemo(auth0__token__error_txt$_(ctx))
 	const error_ = createMemo(()=>auth0__token__error_()?.error)
 	const username__error_ = createMemo(()=>
 		error_() === 'invalid_grant')

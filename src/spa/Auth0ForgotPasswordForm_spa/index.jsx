@@ -6,10 +6,10 @@ import {
 	auth0__login__open,
 	auth0__passwordless_start__POST__fetch2,
 	auth0__signup__open,
-	auth0__token__error__,
+	auth0__token__error$_,
 	auth0__token__error__logout,
 	AUTH0_CLIENT_ID_,
-	AUTH0_DOMAIN__,
+	AUTH0_DOMAIN$_,
 } from '@ctx-core/auth0'
 import { CloseDialogHandle } from '@ctx-core/dialog-ui-solid'
 import { class_ } from '@ctx-core/html'
@@ -29,8 +29,8 @@ export function Auth0ForgotPasswordForm_spa($p) {
 	const label_class_ = createMemo(()=>$p.label_class ?? '')
 	const ctx = ctx__Context__use()
 	auth0__init(ctx)
-	const AUTH0_DOMAIN_ = useMemo(AUTH0_DOMAIN__(ctx))
-	const auth0__token__error_ = useMemo(auth0__token__error__(ctx))
+	const AUTH0_DOMAIN_ = useMemo(AUTH0_DOMAIN$_(ctx))
+	const auth0__token__error_ = useMemo(auth0__token__error$_(ctx))
 	/** @type {HTMLInputElement} */
 	let email_input
 	const error_ = createMemo(()=>

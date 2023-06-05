@@ -5,11 +5,11 @@ import {
 	auth0__init,
 	auth0__oauth_token__POST__fetch2,
 	auth0__signup__open,
-	auth0__token__error__,
+	auth0__token__error$_,
 	auth0__token__error__logout,
-	auth0__token__error_txt__,
-	auth0__token__json__,
-	AUTH0_DOMAIN__,
+	auth0__token__error_txt$_,
+	auth0__token__json$_,
+	AUTH0_DOMAIN$_,
 	password_realm__body_,
 } from '@ctx-core/auth0'
 import { class_ } from '@ctx-core/html'
@@ -32,9 +32,9 @@ export function LoginForm_auth0_spa($p) {
 	const label_class_ = createMemo(()=>$p.label_class ?? '')
 	const ctx = ctx__Context__use()
 	auth0__init(ctx)
-	const auth0__token__error_ = useMemo(auth0__token__error__(ctx))
-	const auth0__token__error_txt_ = useMemo(auth0__token__error_txt__(ctx))
-	const AUTH0_DOMAIN_ = useMemo(AUTH0_DOMAIN__(ctx))
+	const auth0__token__error_ = useMemo(auth0__token__error$_(ctx))
+	const auth0__token__error_txt_ = useMemo(auth0__token__error_txt$_(ctx))
+	const AUTH0_DOMAIN_ = useMemo(AUTH0_DOMAIN$_(ctx))
 	/** @type {HTMLDivElement} */
 	let root
 	/** @type {HTMLInputElement} */
@@ -172,12 +172,12 @@ export function LoginForm_auth0_spa($p) {
 		const [token_response_or_error, response] =
 			await auth0__oauth_token__POST__fetch2(ctx, body)
 		if (response.ok) {
-			auth0__token__json__(ctx).$ = JSON.stringify(token_response_or_error)
+			auth0__token__json$_(ctx).$ = JSON.stringify(token_response_or_error)
 			schedule_forms_clear()
 			auth0__close(ctx)
 		} else if ('error' in token_response_or_error) {
 			const auth_token_error = token_response_or_error
-			auth0__token__error__(ctx).$ = auth_token_error
+			auth0__token__error$_(ctx).$ = auth_token_error
 			auth0__token__error__logout(ctx, auth_token_error)
 		}
 	}
