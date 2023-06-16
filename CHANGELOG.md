@@ -1,5 +1,17 @@
 # @ctx-core/auth0-spa-solid
 
+## 2.0.395
+
+### Patch Changes
+
+- @ctx-core/solid-nanostores: ^13.0.2 -> ^13.0.3
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/auth0@39.0.4
+  - @ctx-core/dialog-ui-solid@2.2.136
+  - @ctx-core/notyf@1.0.193
+  - @ctx-core/solid-nanostores@13.0.4
+
 ## 2.0.394
 
 ### Patch Changes
