@@ -1,5 +1,13 @@
 # @ctx-core/auth0-spa-solid
 
+## 2.0.409
+
+### Patch Changes
+
+- Updated dependencies
+  - @ctx-core/object@28.0.3
+  - @ctx-core/solid-nanostores@15.0.0
+
 ## 2.0.408
 
 ### Patch Changes
