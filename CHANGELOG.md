@@ -1,5 +1,17 @@
 # @ctx-core/auth0-spa-solid
 
+## 2.0.444
+
+### Patch Changes
+
+- solid-js: ^1.7.8 -> ^1.7.9
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/solid-js@1.4.3
+  - @ctx-core/solid-nanostores@17.0.2
+  - @ctx-core/ui-solid@15.0.5
+  - @ctx-core/dialog-ui-solid@2.2.173
+
 ## 2.0.443
 
 ### Patch Changes
