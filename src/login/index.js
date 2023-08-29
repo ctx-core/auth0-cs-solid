@@ -1,9 +1,9 @@
 import {
 	auth0__close,
 	auth0__oauth_token__POST__fetch2,
-	auth0__token__error$_,
 	auth0__token__error__logout,
-	auth0__token__json$_,
+	auth0__token__error__set,
+	auth0__token__json__set,
 	password_realm__body_
 } from '@ctx-core/auth0'
 import { auth0__body__login_ } from '../auth0__body__login_/index.js'
@@ -13,13 +13,13 @@ export const login = async (ctx, data, schedule_forms_clear = ()=>{})=>{
 			ctx,
 			password_realm__body_(ctx, auth0__body__login_(ctx, data)))
 	if (response.ok) {
-		auth0__token__json$_(ctx).$ = JSON.stringify(json)
+		auth0__token__json__set(ctx, JSON.stringify(json))
 		schedule_forms_clear()
 		auth0__close(ctx)
 	} else {
 		/** @type {import('auth0-js').Auth0Error} */
 		const auth0_error = json
-		auth0__token__error$_(ctx).$ = auth0_error
+		auth0__token__error__set(ctx, auth0_error)
 		auth0__token__error__logout(ctx, auth0_error)
 	}
 }

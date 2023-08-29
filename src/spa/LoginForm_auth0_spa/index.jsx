@@ -7,8 +7,9 @@ import {
 	auth0__signup__open,
 	auth0__token__error$_,
 	auth0__token__error__logout,
+	auth0__token__error__set,
 	auth0__token__error_txt$_,
-	auth0__token__json$_,
+	auth0__token__json__set,
 	AUTH0_DOMAIN$_,
 	password_realm__body_,
 } from '@ctx-core/auth0'
@@ -172,12 +173,12 @@ export function LoginForm_auth0_spa($p) {
 		const [token_response_or_error, response] =
 			await auth0__oauth_token__POST__fetch2(ctx, body)
 		if (response.ok) {
-			auth0__token__json$_(ctx).$ = JSON.stringify(token_response_or_error)
+			auth0__token__json__set(ctx, JSON.stringify(token_response_or_error))
 			schedule_forms_clear()
 			auth0__close(ctx)
 		} else if ('error' in token_response_or_error) {
 			const auth_token_error = token_response_or_error
-			auth0__token__error$_(ctx).$ = auth_token_error
+			auth0__token__error__set(ctx, auth_token_error)
 			auth0__token__error__logout(ctx, auth_token_error)
 		}
 	}
