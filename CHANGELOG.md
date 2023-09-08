@@ -1,5 +1,11 @@
 # @ctx-core/auth0-spa-solid
 
+## 2.0.469
+
+### Patch Changes
+
+- @ctx-core/auth0: ^40.0.15 -> ^40.0.16
+
 ## 2.0.468
 
 ### Patch Changes
