@@ -1,5 +1,13 @@
 # @ctx-core/auth0-spa-solid
 
+## 2.0.518
+
+### Patch Changes
+
+- @ctx-core/html: ^11.4.0 -> ^11.5.0
+- Updated dependencies
+  - @ctx-core/dom@14.2.2
+
 ## 2.0.517
 
 ### Patch Changes
