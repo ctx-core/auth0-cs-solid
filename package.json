@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/auth0-cs-solid",
-	"version": "2.0.522",
+	"version": "2.0.523",
 	"description": "Auth0 solid-js components & ctx-core integration for client-server multipage apps & font-end single page web apps",
 	"keywords": [
 		"ctx-core",
@@ -39,23 +39,23 @@
 		"test-unit-coverage": "c8 pnpm test-unit"
 	},
 	"dependencies": {
-		"@ctx-core/auth0": "^40.0.59",
-		"@ctx-core/dialog-ui-solid": "^2.2.203",
-		"@ctx-core/dom": "^14.2.3",
-		"@ctx-core/html": "^11.5.0",
-		"@ctx-core/notyf": "^2.0.21",
-		"@ctx-core/object": "^28.2.0",
-		"@ctx-core/solid-js": "^1.4.16",
-		"@ctx-core/solid-nanostores": "^19.0.3",
-		"@ctx-core/ui-solid": "^17.0.3",
+		"@ctx-core/auth0": "^40.0.60",
+		"@ctx-core/dialog-ui-solid": "^2.2.204",
+		"@ctx-core/dom": "^14.2.4",
+		"@ctx-core/html": "^11.5.1",
+		"@ctx-core/notyf": "^2.0.22",
+		"@ctx-core/object": "^28.2.1",
+		"@ctx-core/solid-js": "^1.4.17",
+		"@ctx-core/solid-nanostores": "^19.0.4",
+		"@ctx-core/ui-solid": "^17.0.4",
 		"auth0-js": "^9.23.0",
-		"solid-js": "^1.8.1"
+		"solid-js": "^1.8.3"
 	},
 	"devDependencies": {
-		"@types/auth0-js": "^9.21.1",
+		"@types/auth0-js": "^9.21.2",
 		"c8": "^8.0.1",
 		"check-dts": "^0.7.2",
-		"tsx": "^3.13.0",
+		"tsx": "^3.14.0",
 		"typescript": "next",
 		"uvu": "^0.5.6"
 	},
