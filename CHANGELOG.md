@@ -1,5 +1,16 @@
 # @ctx-core/auth0-spa-solid
 
+## 2.0.525
+
+### Patch Changes
+
+- @ctx-core/dialog-ui-solid: ^2.2.204 -> ^2.2.205
+- @ctx-core/ui-solid: ^17.0.4 -> ^17.0.5
+- @ctx-core/auth0: ^40.0.61 -> ^40.0.62
+- @ctx-core/notyf: ^2.0.22 -> ^2.0.23
+- @ctx-core/solid-nanostores: ^19.0.4 -> ^19.0.5
+- @ctx-core/solid-js: ^1.4.18 -> ^1.4.19
+
 ## 2.0.524
 
 ### Patch Changes
