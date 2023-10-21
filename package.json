@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/auth0-cs-solid",
-	"version": "2.0.525",
+	"version": "2.0.526",
 	"description": "Auth0 solid-js components & ctx-core integration for client-server multipage apps & font-end single page web apps",
 	"keywords": [
 		"ctx-core",
@@ -46,7 +46,7 @@
 		"@ctx-core/notyf": "^2.0.23",
 		"@ctx-core/object": "^28.2.1",
 		"@ctx-core/solid-js": "^1.4.19",
-		"@ctx-core/solid-nanostores": "^19.0.5",
+		"@ctx-core/solid-nanostores": "^19.0.6",
 		"@ctx-core/ui-solid": "^17.0.5",
 		"auth0-js": "^9.23.1",
 		"solid-js": "^1.8.3"
