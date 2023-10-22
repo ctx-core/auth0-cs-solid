@@ -1,5 +1,13 @@
 # @ctx-core/auth0-spa-solid
 
+## 2.0.531
+
+### Patch Changes
+
+- @ctx-core/ui-solid: ^17.0.6 -> ^17.0.7
+- Updated dependencies
+  - @ctx-core/dialog-ui-solid@2.2.209
+
 ## 2.0.530
 
 ### Patch Changes
