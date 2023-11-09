@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/auth0-cs-solid",
-	"version": "2.0.558",
+	"version": "2.0.559",
 	"description": "Auth0 solid-js components & ctx-core integration for client-server multipage apps & font-end single page web apps",
 	"keywords": [
 		"ctx-core",
@@ -39,7 +39,7 @@
 		"test-unit-coverage": "c8 pnpm test-unit"
 	},
 	"dependencies": {
-		"@ctx-core/auth0": "^40.0.89",
+		"@ctx-core/auth0": "^40.0.90",
 		"@ctx-core/dialog-ui-solid": "^2.2.223",
 		"@ctx-core/dom": "^15.0.3",
 		"@ctx-core/html": "^11.5.3",
