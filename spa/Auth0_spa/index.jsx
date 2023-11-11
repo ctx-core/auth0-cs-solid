@@ -1,4 +1,3 @@
-import { createMemo, Show } from 'solid-js'
 import {
 	auth0__change_password__opened$_,
 	auth0__forgot_password__check_email__opened$_,
@@ -11,6 +10,7 @@ import { class_ } from '@ctx-core/html'
 import { ctx__Context__use } from '@ctx-core/solid-js'
 import { useMemo } from '@ctx-core/solid-nanostores'
 import { Matcha, Style_ } from '@ctx-core/ui-solid'
+import { createMemo, Show } from 'solid-js'
 import { Auth0ForgotPasswordForm_spa } from '../Auth0ForgotPasswordForm_spa/index.jsx'
 import { ChangePasswordForm_auth0_spa } from '../ChangePasswordForm_auth0_spa/index.jsx'
 import { CloseDialogHandle_auth0_spa } from '../CloseDialogHandle_auth0_spa/index.jsx'

@@ -70,20 +70,20 @@ export function Auth0ForgotPasswordForm_spa($p) {
 		return (
 			<fieldset>
 				<label class="field">
-				<div class={label_class_()}>Email</div>
-				<input
-					ref={$=>email_input = $}
-					placeholder="your@email.com"
-					required={true}
-					class={class_(
-						'form-control',
-						input_class_(),
-						{
-							invalid: !!error_()
-						})}
-					type="email"
-					id="email-forgot_password"
-					name="email"/>
+					<div class={label_class_()}>Email</div>
+					<input
+						ref={$=>email_input = $}
+						placeholder="your@email.com"
+						required={true}
+						class={class_(
+							'form-control',
+							input_class_(),
+							{
+								invalid: !!error_()
+							})}
+						type="email"
+						id="email-forgot_password"
+						name="email"/>
 				</label>
 			</fieldset>
 		)
@@ -136,7 +136,7 @@ export function Auth0ForgotPasswordForm_spa($p) {
 			auth0__token__error__logout(ctx, auth0_token_error)
 			return
 		}
-		/** @type {import('../_types').auth0__passwordless_start__POST__fetch2__body_T} */
+		/** @type {import('../_types/index.d.ts').auth0__passwordless_start__POST__fetch2__body_T} */
 		await auth0__passwordless_start__POST__fetch2(ctx, auth0__body__login_(ctx, data))
 		auth0__forgot_password__check_email__open(ctx)
 	}

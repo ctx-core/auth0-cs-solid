@@ -155,7 +155,8 @@ export function LoginForm_auth0_spa($p) {
 		event,
 		username_login_input,
 		password_login_input,
-		schedule_forms_clear = ()=>{},
+		schedule_forms_clear = ()=>{
+		},
 	) {
 		event.preventDefault()
 		const username = username_login_input.value
@@ -167,7 +168,8 @@ export function LoginForm_auth0_spa($p) {
 	 * @param schedule_forms_clear{()=>void}
 	 * @return {Promise<void>}
 	 */
-	async function login(data, schedule_forms_clear = ()=>{}) {
+	async function login(data, schedule_forms_clear = ()=>{
+	}) {
 		/** @type {auth0__login_data_T} */
 		const body = password_realm__body_(ctx, auth0__body_(ctx, data))
 		const [token_response_or_error, response] =

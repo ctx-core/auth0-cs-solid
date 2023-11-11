@@ -1,5 +1,32 @@
 # @ctx-core/auth0-spa-solid
 
+## 2.1.0
+
+### Minor Changes
+
+- fix:types package.json exports
+- tsconfig:
+
+      "module": "ESNext"
+      "moduleResolution": "nodenext"
+      "target": "ESNext"
+
+### Patch Changes
+
+- package.json: - "svelte": "./src/index.js"
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/auth0@40.1.0
+  - @ctx-core/dialog-ui-solid@2.3.0
+  - @ctx-core/dom@15.1.0
+  - @ctx-core/html@11.6.0
+  - @ctx-core/notyf@2.1.0
+  - @ctx-core/object@30.1.0
+  - @ctx-core/solid-js@1.5.0
+  - @ctx-core/solid-nanostores@24.0.0
+  - @ctx-core/ui-solid@21.0.0
+
 ## 2.0.566
 
 ### Patch Changes

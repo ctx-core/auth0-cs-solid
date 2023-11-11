@@ -15,8 +15,8 @@ import { class_ } from '@ctx-core/html'
 import { ctx__Context__use } from '@ctx-core/solid-js'
 import { useMemo } from '@ctx-core/solid-nanostores'
 import { createMemo, Show } from 'solid-js'
-import { login } from '../../login/index.js'
 import { form__clear__schedule_ } from '../../form__clear__schedule_/index.js'
+import { login } from '../../login/index.js'
 import { CloseDialogHandle_auth0_spa } from '../CloseDialogHandle_auth0_spa/index.jsx'
 /**
  * @param {import('./index.d.ts').SignupForm_auth0_spa__props_T}$p
@@ -132,9 +132,9 @@ export function SignupForm_auth0_spa($p) {
 					<p>
 						By clicking ‘Sign up’ you agree to the terms of this Website
 						<br/>
-						<a href="." target="_blank">Terms of Service</a>
+						<a href="" target="_blank">Terms of Service</a>
 						and
-						<a href="." target="_blank">Privacy Policy</a>
+						<a href="" target="_blank">Privacy Policy</a>
 					</p>
 				</Show>
 			</fieldset>)
@@ -168,7 +168,7 @@ export function SignupForm_auth0_spa($p) {
 	}
 	/**
 	 * @param event{Event}
-	 * @param params{import('../_types').signup__onsubmit__o_T}
+	 * @param params{import('../_types/index.js').signup__onsubmit__o_T}
 	 * @param schedule_forms_clear{()=>void}
 	 * @return {Promise<boolean>}
 	 */
@@ -179,7 +179,8 @@ export function SignupForm_auth0_spa($p) {
 			password_input,
 			password_confirmation_input,
 		},
-		schedule_forms_clear = ()=>{}
+		schedule_forms_clear = ()=>{
+		}
 	) {
 		event.preventDefault()
 		const email = email_input.value
@@ -201,11 +202,12 @@ export function SignupForm_auth0_spa($p) {
 		return true
 	}
 	/**
-	 * @param data{import('../_types').auth0__signup_data_T}
+	 * @param data{import('../_types/index.js').auth0__signup_data_T}
 	 * @param schedule_forms_clear{()=>void}
 	 * @return {Promise<void>}
 	 */
-	async function signup(data, schedule_forms_clear = ()=>{}) {
+	async function signup(data, schedule_forms_clear = ()=>{
+	}) {
 		const [auth0_userinfo_or_auth0_error] =
 			await post_auth0_dbconnections_signup(
 				ctx,
@@ -215,8 +217,8 @@ export function SignupForm_auth0_spa($p) {
 			const { code, description } = auth0_error
 			const error_description =
 				code === 'user_exists'
-				? `${data.email} is already signed up`
-				: description
+					? `${data.email} is already signed up`
+					: description
 			auth0__token__error__logout(ctx, { error: 'email', error_description })
 			return
 		}

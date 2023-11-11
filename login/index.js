@@ -7,7 +7,8 @@ import {
 	password_realm__body_
 } from '@ctx-core/auth0'
 import { auth0__body__login_ } from '../auth0__body__login_/index.js'
-export const login = async (ctx, data, schedule_forms_clear = ()=>{})=>{
+export const login = async (ctx, data, schedule_forms_clear = ()=>{
+})=>{
 	const [json, response] =
 		await auth0__oauth_token__POST__fetch2(
 			ctx,
