@@ -19,8 +19,8 @@ import { useMemo } from '@ctx-core/solid-nanostores'
 import { createMemo, onMount, Show } from 'solid-js'
 import { form__clear__schedule } from '../../form__clear__schedule/index.js'
 import { CloseDialogHandle_auth0_spa } from '../CloseDialogHandle_auth0_spa/index.jsx'
-/** @typedef {import('@ctx-core/auth0').auth0__login_data_T}auth0__login_data_T */
-/** @typedef {import('./index.d.ts').LoginForm_auth0_spa__props_T}LoginForm_auth0__props_T */
+/** @typedef {import('@ctx-core/auth0').auth0__login_data_T} */
+/** @typedef {import('./index.d.ts').LoginForm_auth0_spa__props_T} */
 /**
  * @param {LoginForm_auth0__props_T}$p
  * @returns {JSX.Element}

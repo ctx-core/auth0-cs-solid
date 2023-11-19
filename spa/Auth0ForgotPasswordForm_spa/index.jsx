@@ -17,7 +17,7 @@ import { ctx__Context__use } from '@ctx-core/solid-js'
 import { useMemo } from '@ctx-core/solid-nanostores'
 import { createMemo, onMount, Show } from 'solid-js'
 import { auth0__body__login_ } from '../../auth0__body__login_/index.js'
-/** @typedef {import('solid-js').JSX}JSX */
+/** @typedef {import('solid-js').JSX} */
 /**
  * @param {import('./index.d.ts').Auth0ForgotPasswordForm_spa__props_T}$p
  * @return {JSX.Element}

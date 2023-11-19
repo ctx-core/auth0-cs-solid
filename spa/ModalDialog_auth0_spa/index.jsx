@@ -3,7 +3,7 @@ import { class_ } from '@ctx-core/html'
 import { Style_ } from '@ctx-core/ui-solid'
 import { createMemo } from 'solid-js'
 import { Auth0_spa } from '../Auth0_spa/index.jsx'
-/** @typedef {import('solid-js').JSX}JSX */
+/** @typedef {import('solid-js').JSX} */
 /**
  * @param {import('./index.d.ts').ModalDialog_auth0_spa__props_T}$p
  * @return {JSX.Element[]}

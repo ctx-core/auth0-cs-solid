@@ -15,7 +15,7 @@ import { ctx__Context__use } from '@ctx-core/solid-js'
 import { useMemo } from '@ctx-core/solid-nanostores'
 import { createMemo, onMount, Show } from 'solid-js'
 import { form__clear__schedule_ } from '../../form__clear__schedule_/index.js'
-/** @typedef {import('solid-js').JSX}JSX */
+/** @typedef {import('solid-js').JSX} */
 /**
  * @param {import('./index.d.ts').ChangePasswordForm_auth0_spa__props_T}$p
  * @return {JSX.Element}

@@ -3,7 +3,7 @@ import { CloseDialogHandle } from '@ctx-core/dialog-ui-solid'
 import { class_ } from '@ctx-core/html'
 import { ctx__Context__use } from '@ctx-core/solid-js'
 import { createMemo, onMount } from 'solid-js'
-/** @typedef {import('solid-js').JSX}JSX */
+/** @typedef {import('solid-js').JSX} */
 /**
  * @param {import('./index.d.ts').ForgotPassword__CheckEmailForm__auth0_spa__props_T}$p
  * @returns {import('solid-js').JSX.Element}

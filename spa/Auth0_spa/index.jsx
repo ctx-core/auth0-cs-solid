@@ -17,7 +17,7 @@ import { CloseDialogHandle_auth0_spa } from '../CloseDialogHandle_auth0_spa/inde
 import { ForgotPassword__CheckEmailForm__auth0_spa } from '../ForgotPassword__CheckEmailForm__auth0_spa/index.jsx'
 import { LoginForm_auth0_spa } from '../LoginForm_auth0_spa/index.jsx'
 import { SignupForm_auth0_spa } from '../SignupForm_auth0_spa/index.jsx'
-/** @typedef {import('solid-js').JSX}JSX */
+/** @typedef {import('solid-js').JSX} */
 /**
  * @param {import('./index.d.ts').Auth0_spa__props_T}$p Auth0_spa__props_T}
  * @return {JSX.Element[]}
