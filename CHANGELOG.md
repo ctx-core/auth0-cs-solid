@@ -1,5 +1,14 @@
 # @ctx-core/auth0-spa-solid
 
+## 2.1.70
+
+### Patch Changes
+
+- @ctx-core/auth0: ^40.1.64 -> ^40.1.65
+- @ctx-core/notyf: ^2.1.36 -> ^2.1.37
+- Updated dependencies
+  - @ctx-core/ui-solid@21.0.39
+
 ## 2.1.69
 
 ### Patch Changes
