@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/auth0-cs-solid",
-	"version": "2.1.101",
+	"version": "2.1.102",
 	"description": "Auth0 solid-js components & ctx-core integration for client-server multipage apps & font-end single page web apps",
 	"keywords": [
 		"ctx-core",
@@ -58,15 +58,15 @@
 		"test-unit-coverage": "c8 pnpm test-unit"
 	},
 	"dependencies": {
-		"@ctx-core/auth0": "^40.1.95",
-		"@ctx-core/dialog-ui-solid": "^2.3.55",
-		"@ctx-core/dom": "^15.1.49",
-		"@ctx-core/html": "^11.6.48",
+		"@ctx-core/auth0": "^40.1.96",
+		"@ctx-core/dialog-ui-solid": "^2.3.56",
+		"@ctx-core/dom": "^15.1.50",
+		"@ctx-core/html": "^11.6.49",
 		"@ctx-core/notyf": "^2.1.53",
 		"@ctx-core/object": "^31.1.27",
 		"@ctx-core/solid-js": "^1.5.49",
-		"@ctx-core/solid-nanostores": "^30.0.31",
-		"@ctx-core/ui-solid": "^21.0.51",
+		"@ctx-core/solid-nanostores": "^30.0.32",
+		"@ctx-core/ui-solid": "^21.0.52",
 		"auth0-js": "^9.23.3",
 		"solid-js": "^1.8.7"
 	},
