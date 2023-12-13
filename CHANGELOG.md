@@ -1,5 +1,15 @@
 # @ctx-core/auth0-spa-solid
 
+## 2.1.114
+
+### Patch Changes
+
+- auth0-js: ^9.23.3 -> ^9.24.0
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/ui-solid@21.0.58
+  - @ctx-core/auth0@40.1.108
+
 ## 2.1.113
 
 ### Patch Changes
