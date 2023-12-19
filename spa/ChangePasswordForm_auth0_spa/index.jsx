@@ -9,10 +9,10 @@ import {
 	AUTH0_DOMAIN$_,
 } from '@ctx-core/auth0'
 import { CloseDialogHandle } from '@ctx-core/dialog-ui-solid'
-import { class_ } from '@ctx-core/html'
 import { notyf_error, notyf_success } from '@ctx-core/notyf'
 import { ctx__Context__use } from '@ctx-core/solid-js'
 import { useMemo } from '@ctx-core/solid-nanostores'
+import { html_class_ } from 'ctx-core/html'
 import { createMemo, onMount, Show } from 'solid-js'
 import { form__clear__schedule_ } from '../../form__clear__schedule_/index.js'
 /** @typedef {import('solid-js').JSX} */
@@ -59,13 +59,13 @@ export function ChangePasswordForm_auth0_spa($p) {
 				<Show when={!!auth0__token__error_()}>
 					<ul>
 						<Show when={!!password__error_()}>
-							<li class={class_(
+							<li class={html_class_(
 								'error',
 								error_class_()
 							)}>{password__error_()}</li>
 						</Show>
 						<Show when={!!password_confirmation__error_()}>
-							<li class={class_(
+							<li class={html_class_(
 								'error',
 								error_class_()
 							)}>{password_confirmation__error_()}</li>
@@ -80,7 +80,7 @@ export function ChangePasswordForm_auth0_spa($p) {
 							type="password"
 							placeholder="**********"
 							required={true}
-							class={class_(
+							class={html_class_(
 								input_class_(),
 								{ invalid: !!password__error_() })}
 							id="password-change_password"
@@ -93,7 +93,7 @@ export function ChangePasswordForm_auth0_spa($p) {
 							type="password"
 							id="password_confirmation-change_password"
 							name="password_confirmation"
-							class={class_(
+							class={html_class_(
 								input_class_(),
 								{ invalid: !!password_confirmation__error_() })}
 							required={true}
@@ -104,7 +104,7 @@ export function ChangePasswordForm_auth0_spa($p) {
 					<input
 						type="submit"
 						value="Change Password"
-						class={class_(
+						class={html_class_(
 							'button',
 							button_class_()
 						)}

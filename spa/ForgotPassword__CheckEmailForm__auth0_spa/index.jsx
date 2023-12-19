@@ -1,11 +1,12 @@
+/// <reference types="./index.d.ts" />
 import { auth0__close, auth0__login__open } from '@ctx-core/auth0'
 import { CloseDialogHandle } from '@ctx-core/dialog-ui-solid'
-import { class_ } from '@ctx-core/html'
 import { ctx__Context__use } from '@ctx-core/solid-js'
+import { html_class_ } from 'ctx-core/html'
 import { createMemo, onMount } from 'solid-js'
 /** @typedef {import('solid-js').JSX} */
 /**
- * @param {import('./index.d.ts').ForgotPassword__CheckEmailForm__auth0_spa__props_T}$p
+ * @param {ForgotPassword__CheckEmailForm__auth0_spa__props_T}$p
  * @returns {import('solid-js').JSX.Element}
  */
 export function ForgotPassword__CheckEmailForm__auth0_spa($p) {
@@ -18,7 +19,7 @@ export function ForgotPassword__CheckEmailForm__auth0_spa($p) {
 	return /** @type {JSX.Element} */(
 		<div
 			ref={$=>root = $}
-			class={class_(
+			class={html_class_(
 				'form',
 				'forgot_password_check_email',
 				$p__class_()

@@ -1,11 +1,12 @@
+/// <reference types="./index.d.ts" />
 import { ModalDialog } from '@ctx-core/dialog-ui-solid'
-import { class_ } from '@ctx-core/html'
 import { Style_ } from '@ctx-core/ui-solid'
+import { html_class_ } from 'ctx-core/html'
 import { createMemo } from 'solid-js'
 import { Auth0_spa } from '../Auth0_spa/index.jsx'
 /** @typedef {import('solid-js').JSX} */
 /**
- * @param {import('./index.d.ts').ModalDialog_auth0_spa__props_T}$p
+ * @param {ModalDialog_auth0_spa__props_T}$p
  * @return {JSX.Element[]}
  */
 export function ModalDialog_auth0_spa($p) {
@@ -14,7 +15,7 @@ export function ModalDialog_auth0_spa($p) {
 	return /** @type {JSX.Element} */[
 		<Style/>,
 		<ModalDialog
-			class={class_(
+			class={html_class_(
 				'ModalDialog_auth0_spa',
 				$p__class_()
 			)}

@@ -6,10 +6,10 @@ import {
 	auth0__opened__class$_,
 	auth0__signup__opened$_,
 } from '@ctx-core/auth0'
-import { class_ } from '@ctx-core/html'
 import { ctx__Context__use } from '@ctx-core/solid-js'
 import { useMemo } from '@ctx-core/solid-nanostores'
 import { Matcha, Style_ } from '@ctx-core/ui-solid'
+import { html_class_ } from 'ctx-core/html'
 import { createMemo, Show } from 'solid-js'
 import { Auth0ForgotPasswordForm_spa } from '../Auth0ForgotPasswordForm_spa/index.jsx'
 import { ChangePasswordForm_auth0_spa } from '../ChangePasswordForm_auth0_spa/index.jsx'
@@ -36,7 +36,7 @@ export function Auth0_spa(/** @type {Auth0_spa__props_T} */$p) {
 	return /** @type {JSX.Element} */[
 		<Style/>,
 		<div
-			class={class_(
+			class={html_class_(
 				'Auth0',
 				auth0__opened__class_(),
 				$p__class_(),

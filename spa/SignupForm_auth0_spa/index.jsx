@@ -1,3 +1,4 @@
+/// <reference types="./index.d.ts" />
 import {
 	auth0__body_,
 	auth0__forgot_password__open,
@@ -11,15 +12,15 @@ import {
 	post_auth0_dbconnections_signup,
 	validate_auth0_signup
 } from '@ctx-core/auth0'
-import { class_ } from '@ctx-core/html'
 import { ctx__Context__use } from '@ctx-core/solid-js'
 import { useMemo } from '@ctx-core/solid-nanostores'
+import { html_class_ } from 'ctx-core/html'
 import { createMemo, Show } from 'solid-js'
 import { form__clear__schedule_ } from '../../form__clear__schedule_/index.js'
 import { login } from '../../login/index.js'
 import { CloseDialogHandle_auth0_spa } from '../CloseDialogHandle_auth0_spa/index.jsx'
 /**
- * @param {import('./index.d.ts').SignupForm_auth0_spa__props_T}$p
+ * @param {SignupForm_auth0_spa__props_T}$p
  * @return {JSX.Element}
  */
 export function SignupForm_auth0_spa($p) {
@@ -72,7 +73,7 @@ export function SignupForm_auth0_spa($p) {
 		return (
 			<Show when={!!auth0__token__error_txt_()}>
 				<ul>
-					<li class={class_(
+					<li class={html_class_(
 						'error',
 						error_class_(),
 					)}>
@@ -91,7 +92,7 @@ export function SignupForm_auth0_spa($p) {
 						placeholder="your@email.com"
 						required={true}
 						autocomplete="email"
-						class={class_(
+						class={html_class_(
 							'form-control',
 							input_class_(),
 							{ invalid: !!username__error_() }
@@ -106,7 +107,7 @@ export function SignupForm_auth0_spa($p) {
 						ref={$=>password__input = $}
 						placeholder="**********"
 						required={true}
-						class={class_(
+						class={html_class_(
 							input_class_(),
 							{ invalid: !!password__error_() }
 						)}
@@ -120,7 +121,7 @@ export function SignupForm_auth0_spa($p) {
 						ref={$=>password_confirmation__input = $}
 						placeholder="**********"
 						required={true}
-						class={class_(
+						class={html_class_(
 							input_class_(),
 							{ invalid: !!password_confirmation__error_() }
 						)}
@@ -145,20 +146,20 @@ export function SignupForm_auth0_spa($p) {
 				<input
 					type="submit"
 					value="Sign up"
-					class={class_(
+					class={html_class_(
 						'button',
 						button_class_(),
 					)}
 				/>
 				<label
-					class={class_(
+					class={html_class_(
 						'auth_navigation',
 						label_class_()
 					)}
 					onclick={()=>auth0__login__open(ctx)}
 				>Have an account? Log in&hellip;</label>
 				<label
-					class={class_(
+					class={html_class_(
 						'auth_navigation',
 						label_class_()
 					)}

@@ -12,9 +12,9 @@ import {
 	AUTH0_DOMAIN$_,
 } from '@ctx-core/auth0'
 import { CloseDialogHandle } from '@ctx-core/dialog-ui-solid'
-import { class_ } from '@ctx-core/html'
 import { ctx__Context__use } from '@ctx-core/solid-js'
 import { useMemo } from '@ctx-core/solid-nanostores'
+import { html_class_ } from 'ctx-core/html'
 import { createMemo, onMount, Show } from 'solid-js'
 import { auth0__body__login_ } from '../../auth0__body__login_/index.js'
 /** @typedef {import('solid-js').JSX} */
@@ -55,7 +55,7 @@ export function Auth0ForgotPasswordForm_spa($p) {
 		return (
 			<Show when={!!auth0__token__error_()}>
 				<ul>
-					<li class={class_(
+					<li class={html_class_(
 						'error',
 						error_class_()
 					)}>
@@ -75,7 +75,7 @@ export function Auth0ForgotPasswordForm_spa($p) {
 						ref={$=>email_input = $}
 						placeholder="your@email.com"
 						required={true}
-						class={class_(
+						class={html_class_(
 							'form-control',
 							input_class_(),
 							{
@@ -94,20 +94,20 @@ export function Auth0ForgotPasswordForm_spa($p) {
 				<input
 					type="submit"
 					value="Reset Password"
-					class={class_(
+					class={html_class_(
 						'button',
 						button_class_()
 					)}
 				/>
 				<label
-					class={class_(
+					class={html_class_(
 						'auth_navigation',
 						label_class_()
 					)}
 					onclick={()=>auth0__login__open(ctx)}
 				>Have an account? Log in&hellip;</label>
 				<label
-					class={class_(
+					class={html_class_(
 						'auth_navigation',
 						label_class_()
 					)}

@@ -1,3 +1,4 @@
+/// <reference types="./index.d.ts" />
 import {
 	auth0__body_,
 	auth0__close,
@@ -13,16 +14,16 @@ import {
 	AUTH0_DOMAIN$_,
 	password_realm__body_,
 } from '@ctx-core/auth0'
-import { class_ } from '@ctx-core/html'
 import { ctx__Context__use } from '@ctx-core/solid-js'
 import { useMemo } from '@ctx-core/solid-nanostores'
+import { html_class_ } from 'ctx-core/html'
 import { createMemo, onMount, Show } from 'solid-js'
 import { form__clear__schedule } from '../../form__clear__schedule/index.js'
 import { CloseDialogHandle_auth0_spa } from '../CloseDialogHandle_auth0_spa/index.jsx'
 /** @typedef {import('@ctx-core/auth0').auth0__login_data_T} */
-/** @typedef {import('./index.d.ts').LoginForm_auth0_spa__props_T} */
+/** @typedef {LoginForm_auth0_spa__props_T} */
 /**
- * @param {LoginForm_auth0__props_T}$p
+ * @param {LoginForm_auth0_spa__props_T}$p
  * @returns {JSX.Element}
  */
 export function LoginForm_auth0_spa($p) {
@@ -49,7 +50,7 @@ export function LoginForm_auth0_spa($p) {
 	return (
 		<div
 			ref={$=>root = $}
-			class={class_(
+			class={html_class_(
 				'form',
 				$p__class_()
 			)}
@@ -76,7 +77,7 @@ export function LoginForm_auth0_spa($p) {
 		return (
 			<Show when={!!auth0__token__error_txt_()}>
 				<ul>
-					<li class={class_(
+					<li class={html_class_(
 						'error',
 						error_class_()
 					)}>
@@ -96,7 +97,7 @@ export function LoginForm_auth0_spa($p) {
 						ref={$=>username__input = $}
 						placeholder="your@email.com"
 						required={true}
-						class={class_(
+						class={html_class_(
 							'form-control',
 							input_class_(),
 							{ invalid: !!error_username_() }
@@ -111,7 +112,7 @@ export function LoginForm_auth0_spa($p) {
 						ref={$=>password__input = $}
 						placeholder="**********"
 						required={true}
-						class={class_(
+						class={html_class_(
 							input_class_(),
 							{ invalid: !!error_password_() }
 						)}
@@ -123,13 +124,13 @@ export function LoginForm_auth0_spa($p) {
 	}
 	function Footer() {
 		const label_class_ = createMemo(()=>
-			class_('auth_navigation', label_class_()))
+			html_class_('auth_navigation', label_class_()))
 		return (
 			<footer>
 				<input
 					type="submit"
 					value="Login"
-					class={class_(
+					class={html_class_(
 						'button',
 						button_class_(),
 					)}
