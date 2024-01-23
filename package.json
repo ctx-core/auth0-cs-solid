@@ -67,7 +67,7 @@
 		"@ctx-core/solid-nanostores": "^31.0.65",
 		"@ctx-core/ui-solid": "^21.0.119",
 		"auth0-js": "^9.24.1",
-		"ctx-core": "^5.27.0",
+		"ctx-core": "^5.27.1",
 		"solid-js": "^1.8.12"
 	},
 	"devDependencies": {
