@@ -168,7 +168,7 @@ export function SignupForm_auth0_spa($p) {
 			</footer>)
 	}
 	/**
-	 * @param event{Event}
+	 * @param {Event}event
 	 * @param params{import('../_types/index.js').signup__onsubmit__o_T}
 	 * @param schedule_forms_clear{()=>void}
 	 * @return {Promise<boolean>}

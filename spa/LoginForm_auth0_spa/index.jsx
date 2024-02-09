@@ -146,7 +146,7 @@ export function LoginForm_auth0_spa($p) {
 			</footer>)
 	}
 	/**
-	 * @param event{Event}
+	 * @param {Event}event
 	 * @param username_login_input{HTMLInputElement}
 	 * @param password_login_input{HTMLInputElement}
 	 * @param schedule_forms_clear{()=>void}

@@ -117,7 +117,7 @@ export function Auth0ForgotPasswordForm_spa($p) {
 		)
 	}
 	/**
-	 * @param event{Event}
+	 * @param {Event}event
 	 * @param email_input{HTMLInputElement}
 	 * @return {Promise<void>}
 	 */

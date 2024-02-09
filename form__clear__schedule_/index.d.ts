@@ -1,5 +1,5 @@
-import type { Ctx } from 'ctx-core/be'
+import type { ctx_T } from 'ctx-core/be'
 export declare function form__clear__schedule_(
-	ctx:Ctx,
+	ctx:ctx_T,
 	root:HTMLElement
 ):()=>void
