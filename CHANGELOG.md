@@ -1,5 +1,44 @@
 # @ctx-core/auth0-spa-solid
 
+## 2.1.324
+
+### Patch Changes
+
+- c8: ^10.1.3 -> ^11.0.0
+- check-dts: ^0.8.2 -> ^0.9.0
+- tsx: ^4.20.6 -> ^4.21.0
+- auth0-js: ^9.29.0 -> ^9.30.1
+- solid-js: ^1.9.10 -> ^1.9.11
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/solid-js@1.5.218
+  - @ctx-core/solid-nanostores@31.1.53
+  - @ctx-core/auth0@40.1.297
+  - ctx-core@7.2.33
+  - @ctx-core/dialog-ui-solid@2.3.238
+  - @ctx-core/dom@15.3.103
+  - @ctx-core/notyf@2.1.221
+  - @ctx-core/ui-solid@21.0.224
+
 ## 2.1.323
 
 ### Patch Changes
@@ -9305,7 +9344,6 @@
 ### Major Changes
 
 - initial version:
-
   - Auth0
   - Auth0\_\_props_T
   - Auth0ForgotPasswordForm
