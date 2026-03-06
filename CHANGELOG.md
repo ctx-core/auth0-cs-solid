@@ -1,5 +1,20 @@
 # @ctx-core/auth0-spa-solid
 
+## 2.1.325
+
+### Patch Changes
+
+- chore: migrate scripts from pnpm to bun
+- Updated dependencies
+  - @ctx-core/auth0@40.1.298
+  - ctx-core@7.2.34
+  - @ctx-core/dialog-ui-solid@2.3.239
+  - @ctx-core/dom@15.3.104
+  - @ctx-core/notyf@2.1.222
+  - @ctx-core/solid-js@1.5.219
+  - @ctx-core/solid-nanostores@31.1.54
+  - @ctx-core/ui-solid@21.0.225
+
 ## 2.1.324
 
 ### Patch Changes
